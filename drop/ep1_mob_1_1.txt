@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Greennill, Difficulty: Hard
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+216
+000705
+#
+# Hildeblue/Hildetorr
+255
+000706
+#
+# Mothmant/Mothvert
+0
+000000
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+201
+030D13
+#
+# Al Rappy/Pal Rappy
+255
+001400
+#
+# Savage Wolf/Gulgus
+201
+000605
+#
+# Barbarous Wolf/Gulgus-gue
+201
+000606
+#
+# Booma/Bartle
+201
+030D0F
+#
+# Gobooma/Barble
+165
+030D10
+#
+# Gigobooma/Tollaw
+216
+000305
+#
+# Grass Assassin/Crimson Assassin
+209
+030D0E
+#
+# Poison Lily/Ob Lily
+201
+000605
+#
+# Nar Lily/Mil Lily
+255
+000706
+#
+# Nano Dragon
+216
+000305
+#
+# Evil Shark/Vulmer
+201
+000605
+#
+# Pal Shark/Govulmer
+201
+000605
+#
+# Guil Shark/Melqueek
+216
+000305
+#
+# Pofuilly Slime
+201
+000606
+#
+# Pouilly Slime
+255
+000F00
+#
+# Pan Arms
+216
+000705
+#
+# Migium
+216
+000605
+#
+# Hidoom
+216
+000605
+#
+# Dubchic/Dubchich
+201
+000605
+#
+# Garanz/Baranz
+209
+000E00
+#
+# Sinow Beat/Sinow Blue
+201
+000606
+#
+# Sinow Gold/Sinow Red
+216
+000305
+#
+# Canadine/Canabin
+201
+000605
+#
+# Canane/Canune
+216
+000705
+#
+# Delsaber
+209
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+216
+000705
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+201
+010124
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+209
+002C00
+#
+# Dark Belra/Indi Belra
+216
+000305
+#
+# Claw
+201
+000605
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+201
+01011E
+#
+# Dimenian/Arlan
+201
+000605
+#
+# La Dimenian/Merlan
+201
+000606
+#
+# So Dimenian/Del-D
+216
+000705
+#
+# Dragon/Sil Dragon
+225
+008900
+#
+# De Rol Le/Dal Ral Lie
+225
+008C00
+#
+# Vol Opt/Vol Opt ver. 2
+225
+008B00
+#
+# Dark Falz
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+201
+000A04
+#

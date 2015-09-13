@@ -1,0 +1,97 @@
+# Tethealla Server Monster Drop File
+# Episode: IV, Section ID: Skyly, Difficulty: Very Hard
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Astark
+190
+00B400
+#
+# Yowie
+185
+010149
+#
+# Satellite Lizard
+190
+01014D
+#
+# Merissa A
+209
+010287
+#
+# Merissa AA
+243
+00B900
+#
+# Girtablulu
+190
+010285
+#
+# Zu
+190
+010137
+#
+# Pazuzu
+243
+00B300
+#
+# Boota
+209
+01014A
+#
+# Za Boota
+185
+010139
+#
+# Ba Boota
+190
+010138
+#
+# Dorphon
+190
+010135
+#
+# Dorphon Eclair
+243
+010358
+#
+# Goran
+209
+010135
+#
+# Goran Detonator
+209
+01034A
+#
+# Pyro Goran
+185
+01014C
+#
+# Sand Rappy
+155
+010355
+#
+# Del Rappy
+216
+031807
+#
+# Saint Million
+229
+01035A
+#
+# Shambertin
+229
+01035A
+#
+# Kondrieu
+249
+01035B
+#

@@ -1,0 +1,81 @@
+# Tethealla Server Box Drop File
+# Episode: I, Section ID: Oran, Difficulty: Normal
+#
+# File layout: 
+#
+# Three lines per box.
+# First line is area the box is found in.
+# Second line is rare occurance rate.  Valid values from 0 to 255.
+# Third line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+6
+202
+020000
+#
+7
+193
+020000
+#
+5
+170
+000302
+#
+7
+172
+000302
+#
+10
+174
+000303
+#
+5
+170
+000202
+#
+7
+172
+000202
+#
+10
+174
+000203
+#
+4
+175
+030F00
+#
+8
+175
+030E23
+#
+10
+175
+030E24
+#
+9
+175
+030E25
+#
+2
+175
+030E1A
+#
+5
+175
+030E1B
+#
+8
+175
+030E1C
+#
+3
+175
+030E20
+#
+4
+175
+030E21
+#
+9
+175
+030E22

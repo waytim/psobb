@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Redria, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+010341
+#
+# Hildeblue/Hildetorr
+221
+030E02
+#
+# Mothmant/Mothvert
+190
+008C01
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+185
+010133
+#
+# Al Rappy/Pal Rappy
+249
+004400
+#
+# Savage Wolf/Gulgus
+190
+010115
+#
+# Barbarous Wolf/Gulgus-gue
+190
+010307
+#
+# Booma/Bartle
+209
+000507
+#
+# Gobooma/Barble
+190
+001400
+#
+# Gigobooma/Tollaw
+190
+002D00
+#
+# Grass Assassin/Crimson Assassin
+190
+008902
+#
+# Poison Lily/Ob Lily
+190
+010342
+#
+# Nar Lily/Mil Lily
+249
+009A00
+#
+# Nano Dragon
+190
+004100
+#
+# Evil Shark/Vulmer
+209
+008B01
+#
+# Pal Shark/Govulmer
+185
+010216
+#
+# Guil Shark/Melqueek
+190
+003400
+#
+# Pofuilly Slime
+185
+010129
+#
+# Pouilly Slime
+221
+001F00
+#
+# Pan Arms
+190
+008A00
+#
+# Migium
+190
+01031F
+#
+# Hidoom
+190
+010345
+#
+# Dubchic/Dubchich
+185
+01012B
+#
+# Garanz/Baranz
+190
+008B02
+#
+# Sinow Beat/Sinow Blue
+185
+01022B
+#
+# Sinow Gold/Sinow Red
+150
+001001
+#
+# Canadine/Canabin
+209
+009005
+#
+# Canane/Canune
+190
+030E08
+#
+# Delsaber
+195
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+123
+001D00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+185
+010134
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+001200
+#
+# Dark Belra/Indi Belra
+190
+002E00
+#
+# Claw
+190
+010117
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+190
+01033E
+#
+# Dimenian/Arlan
+209
+000507
+#
+# La Dimenian/Merlan
+185
+01012A
+#
+# So Dimenian/Del-D
+190
+004C00
+#
+# Dragon/Sil Dragon
+238
+000507
+#
+# De Rol Le/Dal Ral Lie
+238
+000507
+#
+# Vol Opt/Vol Opt ver. 2
+215
+010313
+#
+# Dark Falz
+209
+010227
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+190
+010338
+#

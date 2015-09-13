@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Pinkal, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+002C00
+#
+# Hildeblue/Hildetorr
+249
+030E09
+#
+# Mothmant/Mothvert
+190
+000C06
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+000E01
+#
+# Al Rappy/Pal Rappy
+221
+001001
+#
+# Savage Wolf/Gulgus
+209
+000407
+#
+# Barbarous Wolf/Gulgus-gue
+185
+010307
+#
+# Booma/Bartle
+190
+001400
+#
+# Gobooma/Barble
+190
+002D00
+#
+# Gigobooma/Tollaw
+177
+01012B
+#
+# Grass Assassin/Crimson Assassin
+190
+002500
+#
+# Poison Lily/Ob Lily
+209
+000C06
+#
+# Nar Lily/Mil Lily
+249
+002200
+#
+# Nano Dragon
+209
+008B01
+#
+# Evil Shark/Vulmer
+209
+000C06
+#
+# Pal Shark/Govulmer
+209
+000D01
+#
+# Guil Shark/Melqueek
+190
+006800
+#
+# Pofuilly Slime
+150
+001F00
+#
+# Pouilly Slime
+249
+010338
+#
+# Pan Arms
+209
+008901
+#
+# Migium
+209
+000407
+#
+# Hidoom
+209
+000C06
+#
+# Dubchic/Dubchich
+190
+030E08
+#
+# Garanz/Baranz
+209
+008C01
+#
+# Sinow Beat/Sinow Blue
+185
+010344
+#
+# Sinow Gold/Sinow Red
+123
+001E00
+#
+# Canadine/Canabin
+209
+000C06
+#
+# Canane/Canune
+177
+010134
+#
+# Delsaber
+195
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+190
+030D00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+190
+009400
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+030D04
+#
+# Dark Belra/Indi Belra
+190
+009200
+#
+# Claw
+190
+000D01
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+150
+005100
+#
+# Dimenian/Arlan
+209
+000C06
+#
+# La Dimenian/Merlan
+209
+009004
+#
+# So Dimenian/Del-D
+177
+01012A
+#
+# Dragon/Sil Dragon
+238
+000C06
+#
+# De Rol Le/Dal Ral Lie
+215
+001300
+#
+# Vol Opt/Vol Opt ver. 2
+215
+00A300
+#
+# Dark Falz
+209
+010231
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+209
+000407
+#

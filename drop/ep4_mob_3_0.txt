@@ -1,0 +1,97 @@
+# Tethealla Server Monster Drop File
+# Episode: IV, Section ID: Viridia, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Astark
+190
+01028A
+#
+# Yowie
+185
+01014F
+#
+# Satellite Lizard
+190
+01014D
+#
+# Merissa A
+209
+010287
+#
+# Merissa AA
+243
+010152
+#
+# Girtablulu
+190
+01034D
+#
+# Zu
+190
+010349
+#
+# Pazuzu
+243
+00AF00
+#
+# Boota
+209
+00C800
+#
+# Za Boota
+185
+01035B
+#
+# Ba Boota
+190
+01013B
+#
+# Dorphon
+190
+00B500
+#
+# Dorphon Eclair
+243
+00B600
+#
+# Goran
+209
+010135
+#
+# Goran Detonator
+209
+00AD03
+#
+# Pyro Goran
+185
+010286
+#
+# Sand Rappy
+155
+010154
+#
+# Del Rappy
+216
+010353
+#
+# Saint Million
+229
+010289
+#
+# Shambertin
+229
+01035A
+#
+# Kondrieu
+249
+01035B
+#

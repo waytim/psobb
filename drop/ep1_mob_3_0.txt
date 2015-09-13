@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Viridia, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+030E09
+#
+# Hildeblue/Hildetorr
+249
+002D00
+#
+# Mothmant/Mothvert
+190
+000407
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+000F01
+#
+# Al Rappy/Pal Rappy
+249
+008B02
+#
+# Savage Wolf/Gulgus
+195
+010127
+#
+# Barbarous Wolf/Gulgus-gue
+190
+001400
+#
+# Booma/Bartle
+209
+000907
+#
+# Gobooma/Barble
+209
+008B01
+#
+# Gigobooma/Tollaw
+150
+001001
+#
+# Grass Assassin/Crimson Assassin
+190
+003E00
+#
+# Poison Lily/Ob Lily
+209
+000907
+#
+# Nar Lily/Mil Lily
+249
+010303
+#
+# Nano Dragon
+190
+003400
+#
+# Evil Shark/Vulmer
+209
+000407
+#
+# Pal Shark/Govulmer
+209
+000907
+#
+# Guil Shark/Melqueek
+150
+008A01
+#
+# Pofuilly Slime
+209
+000E01
+#
+# Pouilly Slime
+249
+01031B
+#
+# Pan Arms
+190
+008A00
+#
+# Migium
+209
+008901
+#
+# Hidoom
+209
+008C01
+#
+# Dubchic/Dubchich
+185
+010340
+#
+# Garanz/Baranz
+190
+030D0A
+#
+# Sinow Beat/Sinow Blue
+190
+003900
+#
+# Sinow Gold/Sinow Red
+123
+001E00
+#
+# Canadine/Canabin
+150
+009300
+#
+# Canane/Canune
+195
+010226
+#
+# Delsaber
+195
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+150
+001F00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+177
+01012B
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+030D04
+#
+# Dark Belra/Indi Belra
+190
+030D0B
+#
+# Claw
+209
+000D01
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+177
+010133
+#
+# Dimenian/Arlan
+209
+000407
+#
+# La Dimenian/Merlan
+190
+001500
+#
+# So Dimenian/Del-D
+190
+008B02
+#
+# Dragon/Sil Dragon
+238
+000907
+#
+# De Rol Le/Dal Ral Lie
+238
+000407
+#
+# Vol Opt/Vol Opt ver. 2
+215
+00A300
+#
+# Dark Falz
+209
+010227
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+209
+000907
+#

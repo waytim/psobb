@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Greennill, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+030E09
+#
+# Hildeblue/Hildetorr
+249
+004500
+#
+# Mothmant/Mothvert
+190
+008C01
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+000F01
+#
+# Al Rappy/Pal Rappy
+249
+010129
+#
+# Savage Wolf/Gulgus
+209
+000307
+#
+# Barbarous Wolf/Gulgus-gue
+190
+001400
+#
+# Booma/Bartle
+209
+000707
+#
+# Gobooma/Barble
+209
+000E01
+#
+# Gigobooma/Tollaw
+190
+004400
+#
+# Grass Assassin/Crimson Assassin
+150
+030E04
+#
+# Poison Lily/Ob Lily
+190
+000707
+#
+# Nar Lily/Mil Lily
+255
+009000
+#
+# Nano Dragon
+185
+01030B
+#
+# Evil Shark/Vulmer
+209
+000707
+#
+# Pal Shark/Govulmer
+209
+000D01
+#
+# Guil Shark/Melqueek
+190
+009A00
+#
+# Pofuilly Slime
+195
+010226
+#
+# Pouilly Slime
+249
+009400
+#
+# Pan Arms
+190
+003900
+#
+# Migium
+209
+008B01
+#
+# Hidoom
+190
+002C00
+#
+# Dubchic/Dubchich
+185
+01031F
+#
+# Garanz/Baranz
+190
+030D0A
+#
+# Sinow Beat/Sinow Blue
+190
+030E08
+#
+# Sinow Gold/Sinow Red
+150
+008D00
+#
+# Canadine/Canabin
+209
+000707
+#
+# Canane/Canune
+177
+01022B
+#
+# Delsaber
+150
+001001
+#
+# Chaos Sorcerer/Gran Sorcerer
+123
+001D00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+190
+004C00
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+030D04
+#
+# Dark Belra/Indi Belra
+190
+030D0B
+#
+# Claw
+209
+000307
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+185
+010343
+#
+# Dimenian/Arlan
+190
+008B02
+#
+# La Dimenian/Merlan
+190
+001200
+#
+# So Dimenian/Del-D
+177
+01012A
+#
+# Dragon/Sil Dragon
+238
+000707
+#
+# De Rol Le/Dal Ral Lie
+215
+001300
+#
+# Vol Opt/Vol Opt ver. 2
+215
+00A300
+#
+# Dark Falz
+209
+010231
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+190
+006500
+#

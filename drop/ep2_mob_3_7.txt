@@ -1,0 +1,349 @@
+# Tethealla Server Monster Drop File
+# Episode: II, Section ID: Oran, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+000E02
+#
+# Hildeblue/Hildetorr
+249
+005000
+#
+# Mothmant/Mothvert
+190
+000307
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+190
+030E0C
+#
+# Null
+0
+000000
+#
+# Savage Wolf/Gulgus
+190
+010224
+#
+# Barbarous Wolf/Gulgus-gue
+190
+002700
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Grass Assassin/Crimson Assassin
+190
+004600
+#
+# Poison Lily/Ob Lily
+209
+000207
+#
+# Nar Lily/Mil Lily
+249
+010131
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Pan Arms
+209
+002000
+#
+# Migium
+190
+000F02
+#
+# Hidoom
+190
+006A00
+#
+# Dubchic/Dubchich
+177
+010235
+#
+# Garanz/Baranz
+190
+004E00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Delsaber
+209
+009006
+#
+# Chaos Sorcerer/Gran Sorcerer
+190
+005500
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Belra/Indi Belra
+209
+000D01
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dimenian/Arlan
+209
+000307
+#
+# La Dimenian/Merlan
+185
+010313
+#
+# So Dimenian/Del-D
+177
+010130
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+190
+002300
+#
+# Love Rappy
+249
+005B00
+#
+# Merillia
+209
+000307
+#
+# Meriltas
+209
+000207
+#
+# Gee
+209
+000307
+#
+# Gi Gue
+190
+030D0C
+#
+# Mericarol
+190
+008902
+#
+# Merikle
+190
+010346
+#
+# Mericus
+190
+008B02
+#
+# Ul Gibbon
+209
+000307
+#
+# Zol Gibbon
+209
+000207
+#
+# Gibbles
+150
+001D00
+#
+# Sinow Berill
+190
+003F00
+#
+# Sinow Spigell
+177
+010228
+#
+# Dolmolm
+209
+000207
+#
+# Dolmdarl
+185
+010338
+#
+# Morfos
+177
+010229
+#
+# Null
+0
+000000
+#
+# Recon
+0
+000000
+#
+# Sinow Zoa
+190
+003600
+#
+# Sinow Zele
+190
+009700
+#
+# Deldepth
+190
+009800
+#
+# Delbiter
+123
+001E00
+#
+# Barba Ray
+238
+008B02
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gol Dragon
+238
+000207
+#
+# Gal Gryphon
+215
+030D12
+#
+# Olga Flow
+209
+030E01
+#
+# St. Rappy
+255
+031500
+#
+# Halo Rappy
+255
+031502
+#
+# Egg Rappy
+255
+031501
+#
+# Ill Gill
+190
+005700
+#
+# Del Lily
+190
+008C02
+#
+# Epsilon
+190
+006600
+#

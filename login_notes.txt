@@ -1,0 +1,339 @@
+version 0.047 04/23/2010
+------------------------
+- New characters created with a default language value of 0 instead
+of 1.
+
+
+version 0.046 03/26/2010
+------------------------
+- Implemented a common bank.  SQL users will need to execute the
+commands to create the bank_data table (See pso_server.sql in the
+SQL folder of the login server.)
+
+
+version 0.045 08/17/2009
+------------------------
+- Fixed security problem with ships registering on the ship gate.
+This version of the login server can only be used with
+Ship Server v.130 and higher.
+
+
+version 0.044 01/22/2009
+------------------------
+- Fixed dressing room flag bug.  If you spend more than 10 minutes 
+in the dressing room and someone else logs on, your flag will be 
+deleted by the server causing your character to be reset.
+Timeout now is 2 hours.
+
+
+version 0.043 11/23/2008
+------------------------
+- Removed the idle check.
+- Now sends out server time as UTC instead of local time to
+clients.
+
+
+version 0.042 11/4/2008
+-----------------------
+- IP connection spam check changed for both patch and login
+server.  Connections will no longer be blocked.  There is
+now a maximum amount of connetions per IP address and when
+that is exceeded, the oldest connection is disconnected
+automatically.
+- Only works with ship v0.104 or higher.
+
+
+version 0.041 10/22/2008
+------------------------
+- Fixed a new crash bug that I caused due to a typo. :D
+(Hopefully there aren't any more...)
+
+
+version 0.040 10/22/2008
+------------------------
+- Some code optimizations.  (Mainly reduced the use of "memcpy" in 
+the code a great deal...)
+- Update to internal version number.  Expects ship_server v.096
+
+
+version 0.039 10/21/2008
+------------------------
+- Since a new Vista EXE was released, now enforces client executable
+1.25.10 for both Vista and XP.  (This should be done to make sure
+that clients are in-sync.)
+- Startup time reduced.
+
+
+version 0.038 10/20/2008
+------------------------
+- Fixed bug where SJS and Lame d'Argent counters would reset on
+sign off.
+
+
+version 0.037 10/20/2008
+------------------------
+- Minor code cleanup.
+- Source code release.
+- Now distributed under GPL (General Public License) version 3.
+
+
+version 0.036 10/12/2008
+------------------------
+- Login server starts minimized to tray, unless an error occurs.
+You can double click the tray icon to change the visibility of the
+ship server.
+- Fixed pso_server.sql file account_data table (made change to
+lasthwinfo and lastchar to allow to be NULL)
+
+
+version 0.035 10/07/2008
+------------------------
+- Fixed another issue where sometimes a client could log on twice
+with the same account.  (One screen would end up getting stuck and
+the other would change into the character that was just logged on...)
+- Login server only works with ship 0.089+
+
+
+version 0.034 9/22/2008
+-----------------------
+- Fixed issue with no-SQL version and guild cards.  Now friend name
+and text will properly save.  (Any received guild cards will
+have to be resent...)
+
+
+version 0.033 9/21/2008
+-----------------------
+- Forgot to check if username is correct on non-SQL version. (Oops!)
+
+
+version 0.032 9/21/2008
+-----------------------
+- Allows higher than normal skin IDs for characters to be received
+from the ship server.  (For supporting extra skins, if added.)
+
+
+version 0.031 9/20/2008
+-----------------------
+- Connection test disabled for now.
+
+
+version 0.030 9/19/2008
+-----------------------
+- Only works with ship v0.075 or higher.
+- Now supports passing global announcements to all ships.
+
+
+version 0.029 9/18/2008
+-----------------------
+- Only works with ship v0.072 or higher.
+- Old Tethealla client executables no longer can connect to this
+login server.  Users must update their executables for both
+Vista and XP.
+
+
+version 0.028 9/17/2008
+-----------------------
+- Lol, real guild card send fix GO!
+
+
+version 0.027 9/17/2008
+-----------------------
+- gc_priority initialization error fixed when sending a guild card to
+a user who had none on the SQL version.  (Error has been present since
+0.020)
+
+
+version 0.026 9/17/2008
+-----------------------
+- Now sends pings to the connected ships, every 30 seconds, to ensure
+they're alive. If a ship fails to respond within 30 seconds of a 
+ping, the ship is disconnected.  (Let's be serious here, if a ship
+can't respond within 30000ms of the login's server ping packet,
+the ship shouldn't obviously be hosting on your gate.)
+- Only works with ship v0.070 and higher.
+
+
+version 0.025 9/16/2008
+-----------------------
+- Made compatible with only ship v0.064
+
+
+version 0.024 9/15/2008
+----------------------
+- Fixed crash after ship register on SQL version only.
+(Non-SQL version was not affected by this problem...)
+
+
+version 0.023 9/15/2008
+----------------------
+- No longer need the Visual C DLLs or the manifest files for
+each program inside of the same folder with the executables.
+- Login_server now will pass the normal, global, and local GM
+name colors to each ship on your gate.
+
+The colors can be configured via tethealla.ini
+
+See the example INI file for more details...
+
+- Patch server will now give a warning if welcome.txt is missing or
+there are no patches in the patches folder.
+- Included dummy.txt files in the whole patches example folder as a
+guideline on how it should be structured.
+- Will only work with ship v0.061 or higher...
+
+
+version 0.022 9/15/2008
+-----------------------
+- Fixed problem with character names not showing up in the team
+member list on the non-SQL version.
+- Sorting guild cards should now work on the non-SQL version.
+
+
+version 0.021 9/15/2008
+-----------------------
+- Woops, left some debug code in the .020 non-SQL version.
+This version applies to the non-SQL version only.
+
+The debug code would cause the account and ship_key database
+sizes in memory to double every 10 minutes as well as dump
+every file in it's entireity every 10 minutes.
+
+The login server still reloads the account and ship key databases
+every 10 minutes, but doesn't double the size.
+
+Sorry for the inconvienence, everyone.
+
+
+version 0.020 9/15/2008
+-----------------------
+- Login_server now comes in 2 flavors (SQL and non-SQL versions)
+I haven't done much testing on the non-SQL version, so there may
+be some glitches, but please try it and report back to me.
+I know for sure, sorting guild cards does NOT work with the non-SQL
+version (I'll fix it later), but that should really be the only
+limitation...  besides the hardcoded limit of a maximum of 2,000
+accounts for testing purposes.
+
+The non-SQL version of the login server also comes with non-SQL
+versions of account_add.exe and make_key.exe as well.
+- Play time isn't reset to 0 when using the dressing room.
+- Fixed a bug with the priority settings on the SQL version of
+login_server.
+
+
+version 0.018 9/14/2008
+-----------------------
+- Fixed very small memory leak.
+- More debug information printed to the screen when there are SQL
+problems.
+
+
+version 0.017 9/14/2008
+-----------------------
+- Skipped 0.016 since it was just a test version.
+- Dressing room bug fixed.  (There actually wasn't a bug, it was just that
+the pso_server.sql file had the wrong specs for security_data... anyway,
+I've removed the reliance on dress_flag anyhow.  Should be working fine 
+now...)
+- Now pauses on any error when launching login_server.
+
+
+version 0.015 9/12/2008
+-----------------------
+- Removed unpacked_teth.exe and PsoBB.pat from the archive.
+- Moved default welcome.txt to the archive ini folder.
+- Moved account_add and make_key out of the other archive folder.
+- Updated internal version number.
+- Will only work with SPSOS ship v0.060 or higher.
+
+
+version 0.014 9/10/2008
+-----------------------
+- Very minor network code change.
+
+
+version 0.013 9/10/2008
+-----------------------
+- Increased the number of compiled connections allowed by the
+login server.
+- When the max login or max ship value is invalid in Tethealla.ini,
+the server will automatically use the maximum number of compiled
+connections.
+- Error message for ship key in use now properly sent out.
+- Now also checking for socket exceptions during connections.
+
+
+version 0.012 9/10/2008
+-----------------------
+- Fixed a potential security issue when checking whether or not a
+ship key is in use or not.
+- Now distributed with patch_server v.002
+
+
+version 0.011 9/8/2008
+----------------------
+- Once again using security_data table.  (Changed to RAM before but
+if login_server is closed, all security info is lost...)
+
+You MUST readd the security_data table to your SQL database before
+using the new login_server.
+
+- Removed patch server support from login_server.exe, now use
+patch_server.exe for the patching process.
+
+Well, how do you use it, you may ask?
+
+Just run patch_server.exe and open/forward ports 11000 and 11001.
+
+Layout the new "patches" sub-folder just like a Blue Burst install
+folder with files you want to replace.
+
+The file "welcome.txt" is a unicode text file which serves as the
+patch server banner.
+
+The $ symbol is reserved for controlling colors and such.  (Or should...)
+
+
+version 0.010 9/7/2008
+----------------------
+- No longer uses the MySQL table security_data.  You can safely drop
+this table from your database.
+
+
+version 0.009 9/5/2008
+----------------------
+- Updates the max ship keys on the fly.  It should have done this
+initially, but I forgot about it.  Now you shouldn't have to restart
+the login server when adding or removing ship keys from the server.
+- Once again allows 127.0.0.1 to be used for a ship
+
+
+version 0.008 8/28/2008
+-----------------------
+- Fixed a bug with accounts being able to log on more than once in
+certain circumstances...
+
+
+version 0.007 8/27/2008
+-----------------------
+- Fixed a bug with detecting the maximum number of ship keys...
+- Login server now sends rare enemy appearance rates to the ships.
+
+The rates are now required parts of tethealla.ini
+
+Please check ini\tethealla.ini for more details.
+
+
+version 0.006 8/26/2008
+-----------------------
+- Changed order of operations during ship registration to try to connect
+to the ship as the last thing to do.  (Prevents ships with bad encryption 
+and so on from lagging up the login process...)
+- Now displays key index of registering ship.
+- Now gets the maximum number of keys from the SQL table and will ignore
+all other indexes higher than this range.
+
+
+version 0.005 8/26/2008
+-----------------------
+- Initial public release

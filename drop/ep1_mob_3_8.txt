@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Yellowboze, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+177
+01012B
+#
+# Hildeblue/Hildetorr
+249
+004500
+#
+# Mothmant/Mothvert
+190
+000207
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+000307
+#
+# Al Rappy/Pal Rappy
+249
+01031F
+#
+# Savage Wolf/Gulgus
+209
+000C06
+#
+# Barbarous Wolf/Gulgus-gue
+185
+010345
+#
+# Booma/Bartle
+190
+004400
+#
+# Gobooma/Barble
+190
+002D00
+#
+# Gigobooma/Tollaw
+150
+001001
+#
+# Grass Assassin/Crimson Assassin
+123
+001E00
+#
+# Poison Lily/Ob Lily
+177
+010129
+#
+# Nar Lily/Mil Lily
+249
+008A00
+#
+# Nano Dragon
+190
+008B02
+#
+# Evil Shark/Vulmer
+209
+000D01
+#
+# Pal Shark/Govulmer
+190
+006800
+#
+# Guil Shark/Melqueek
+190
+003400
+#
+# Pofuilly Slime
+209
+000907
+#
+# Pouilly Slime
+249
+002200
+#
+# Pan Arms
+190
+030D02
+#
+# Migium
+209
+000707
+#
+# Hidoom
+209
+000B06
+#
+# Dubchic/Dubchich
+185
+010347
+#
+# Garanz/Baranz
+190
+030D0A
+#
+# Sinow Beat/Sinow Blue
+177
+01022B
+#
+# Sinow Gold/Sinow Red
+190
+030D06
+#
+# Canadine/Canabin
+150
+008D00
+#
+# Canane/Canune
+190
+030E08
+#
+# Delsaber
+209
+030D03
+#
+# Chaos Sorcerer/Gran Sorcerer
+190
+030D00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+190
+009200
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+030D04
+#
+# Dark Belra/Indi Belra
+190
+030D0B
+#
+# Claw
+209
+009007
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+123
+001D00
+#
+# Dimenian/Arlan
+177
+010134
+#
+# La Dimenian/Merlan
+190
+001200
+#
+# So Dimenian/Del-D
+190
+002E00
+#
+# Dragon/Sil Dragon
+215
+030D07
+#
+# De Rol Le/Dal Ral Lie
+215
+001300
+#
+# Vol Opt/Vol Opt ver. 2
+238
+000807
+#
+# Dark Falz
+209
+010232
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+209
+000407
+#

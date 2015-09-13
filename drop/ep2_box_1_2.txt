@@ -1,0 +1,73 @@
+# Tethealla Server Box Drop File
+# Episode: II, Section ID: Skyly, Difficulty: Hard
+#
+# File layout: 
+#
+# Three lines per box.
+# First line is area the box is found in.
+# Second line is rare occurance rate.  Valid values from 0 to 255.
+# Third line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+6
+202
+020000
+#
+7
+193
+020000
+#
+5
+186
+000204
+#
+7
+188
+000204
+#
+10
+190
+000205
+#
+5
+186
+000704
+#
+7
+188
+000704
+#
+10
+190
+000705
+#
+2
+170
+01024B
+#
+3
+170
+01024B
+#
+6
+175
+030F00
+#
+3
+175
+030E1A
+#
+6
+175
+030E1B
+#
+9
+175
+030E1C
+#
+9
+175
+030E23
+#
+5
+175
+01024C

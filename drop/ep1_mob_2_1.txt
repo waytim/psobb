@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Greennill, Difficulty: Very Hard
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+216
+030D08
+#
+# Hildeblue/Hildetorr
+255
+002C00
+#
+# Mothmant/Mothvert
+0
+000000
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+201
+030D13
+#
+# Al Rappy/Pal Rappy
+255
+000707
+#
+# Savage Wolf/Gulgus
+201
+000706
+#
+# Barbarous Wolf/Gulgus-gue
+201
+000D00
+#
+# Booma/Bartle
+201
+030D0F
+#
+# Gobooma/Barble
+201
+030D10
+#
+# Gigobooma/Tollaw
+209
+000306
+#
+# Grass Assassin/Crimson Assassin
+209
+030D0E
+#
+# Poison Lily/Ob Lily
+201
+000305
+#
+# Nar Lily/Mil Lily
+255
+01031F
+#
+# Nano Dragon
+209
+000E00
+#
+# Evil Shark/Vulmer
+201
+000305
+#
+# Pal Shark/Govulmer
+201
+000706
+#
+# Guil Shark/Melqueek
+209
+000306
+#
+# Pofuilly Slime
+209
+000F00
+#
+# Pouilly Slime
+255
+010343
+#
+# Pan Arms
+216
+030E08
+#
+# Migium
+216
+000706
+#
+# Hidoom
+216
+000706
+#
+# Dubchic/Dubchich
+209
+01030B
+#
+# Garanz/Baranz
+216
+000707
+#
+# Sinow Beat/Sinow Blue
+209
+030D01
+#
+# Sinow Gold/Sinow Red
+209
+001003
+#
+# Canadine/Canabin
+201
+000706
+#
+# Canane/Canune
+201
+010223
+#
+# Delsaber
+209
+030D03
+#
+# Chaos Sorcerer/Gran Sorcerer
+216
+008C00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+201
+01011E
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+216
+030500
+#
+# Dark Belra/Indi Belra
+209
+000706
+#
+# Claw
+201
+000706
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+209
+010226
+#
+# Dimenian/Arlan
+201
+000706
+#
+# La Dimenian/Merlan
+201
+001400
+#
+# So Dimenian/Del-D
+201
+000706
+#
+# Dragon/Sil Dragon
+229
+008901
+#
+# De Rol Le/Dal Ral Lie
+229
+008C01
+#
+# Vol Opt/Vol Opt ver. 2
+229
+008B01
+#
+# Dark Falz
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+201
+010221
+#

@@ -1,0 +1,97 @@
+# Tethealla Server Monster Drop File
+# Episode: IV, Section ID: Yellowboze, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Astark
+190
+00B400
+#
+# Yowie
+185
+031803
+#
+# Satellite Lizard
+190
+01014D
+#
+# Merissa A
+209
+010287
+#
+# Merissa AA
+243
+010356
+#
+# Girtablulu
+190
+010285
+#
+# Zu
+190
+010349
+#
+# Pazuzu
+243
+01014A
+#
+# Boota
+209
+00C800
+#
+# Za Boota
+185
+01035B
+#
+# Ba Boota
+190
+01013B
+#
+# Dorphon
+190
+010136
+#
+# Dorphon Eclair
+243
+00C000
+#
+# Goran
+209
+010150
+#
+# Goran Detonator
+209
+01014B
+#
+# Pyro Goran
+185
+00BF00
+#
+# Sand Rappy
+155
+010154
+#
+# Del Rappy
+216
+010358
+#
+# Saint Million
+229
+010289
+#
+# Shambertin
+229
+01035A
+#
+# Kondrieu
+249
+01034B
+#

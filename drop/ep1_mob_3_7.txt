@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Oran, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+002C00
+#
+# Hildeblue/Hildetorr
+221
+030E04
+#
+# Mothmant/Mothvert
+190
+000307
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+000307
+#
+# Al Rappy/Pal Rappy
+249
+030E09
+#
+# Savage Wolf/Gulgus
+209
+000207
+#
+# Barbarous Wolf/Gulgus-gue
+209
+008F06
+#
+# Booma/Bartle
+209
+000307
+#
+# Gobooma/Barble
+209
+008B01
+#
+# Gigobooma/Tollaw
+190
+003600
+#
+# Grass Assassin/Crimson Assassin
+190
+003E00
+#
+# Poison Lily/Ob Lily
+209
+000F01
+#
+# Nar Lily/Mil Lily
+249
+010123
+#
+# Nano Dragon
+150
+001001
+#
+# Evil Shark/Vulmer
+209
+000207
+#
+# Pal Shark/Govulmer
+209
+000D01
+#
+# Guil Shark/Melqueek
+185
+010335
+#
+# Pofuilly Slime
+209
+000E01
+#
+# Pouilly Slime
+249
+010129
+#
+# Pan Arms
+185
+010317
+#
+# Migium
+209
+008901
+#
+# Hidoom
+209
+000207
+#
+# Dubchic/Dubchich
+150
+009307
+#
+# Garanz/Baranz
+190
+008B02
+#
+# Sinow Beat/Sinow Blue
+209
+000307
+#
+# Sinow Gold/Sinow Red
+150
+001F00
+#
+# Canadine/Canabin
+209
+000207
+#
+# Canane/Canune
+190
+008902
+#
+# Delsaber
+195
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+190
+030D00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+190
+009400
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+150
+005A00
+#
+# Dark Belra/Indi Belra
+190
+009200
+#
+# Claw
+209
+000D01
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+177
+01022B
+#
+# Dimenian/Arlan
+209
+000307
+#
+# La Dimenian/Merlan
+190
+004C00
+#
+# So Dimenian/Del-D
+185
+010340
+#
+# Dragon/Sil Dragon
+215
+030D07
+#
+# De Rol Le/Dal Ral Lie
+238
+000207
+#
+# Vol Opt/Vol Opt ver. 2
+238
+000307
+#
+# Dark Falz
+209
+010231
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+209
+000307
+#

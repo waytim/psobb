@@ -1,0 +1,85 @@
+# Tethealla Server Box Drop File
+# Episode: II, Section ID: Purplenum, Difficulty: Hard
+#
+# File layout: 
+#
+# Three lines per box.
+# First line is area the box is found in.
+# Second line is rare occurance rate.  Valid values from 0 to 255.
+# Third line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+6
+202
+020000
+#
+7
+193
+020000
+#
+5
+186
+000804
+#
+7
+188
+000804
+#
+10
+190
+000805
+#
+5
+186
+000304
+#
+7
+188
+000304
+#
+10
+190
+000305
+#
+2
+170
+01024A
+#
+3
+170
+01024A
+#
+4
+175
+030F00
+#
+2
+175
+030E1D
+#
+4
+175
+030E1E
+#
+8
+175
+030E1F
+#
+1
+175
+030E20
+#
+5
+175
+030E21
+#
+7
+175
+030E22
+#
+8
+175
+01024D
+#
+6
+175
+01024E

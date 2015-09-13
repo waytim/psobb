@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Viridia, Difficulty: Normal
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+250
+030002
+#
+# Hildeblue/Hildetorr
+255
+010321
+#
+# Mothmant/Mothvert
+0
+000000
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+154
+030D13
+#
+# Al Rappy/Pal Rappy
+255
+030B01
+#
+# Savage Wolf/Gulgus
+0
+000000
+#
+# Barbarous Wolf/Gulgus-gue
+189
+030900
+#
+# Booma/Bartle
+168
+030D0F
+#
+# Gobooma/Barble
+155
+030D10
+#
+# Gigobooma/Tollaw
+250
+030300
+#
+# Grass Assassin/Crimson Assassin
+158
+030D0E
+#
+# Poison Lily/Ob Lily
+0
+000000
+#
+# Nar Lily/Mil Lily
+255
+010305
+#
+# Nano Dragon
+250
+030300
+#
+# Evil Shark/Vulmer
+0
+000000
+#
+# Pal Shark/Govulmer
+0
+000000
+#
+# Guil Shark/Melqueek
+250
+030300
+#
+# Pofuilly Slime
+191
+030B02
+#
+# Pouilly Slime
+255
+010325
+#
+# Pan Arms
+250
+030002
+#
+# Migium
+250
+030300
+#
+# Hidoom
+250
+030300
+#
+# Dubchic/Dubchich
+170
+010333
+#
+# Garanz/Baranz
+250
+030002
+#
+# Sinow Beat/Sinow Blue
+187
+030A00
+#
+# Sinow Gold/Sinow Red
+250
+030300
+#
+# Canadine/Canabin
+170
+01024C
+#
+# Canane/Canune
+250
+030002
+#
+# Delsaber
+168
+030D03
+#
+# Chaos Sorcerer/Gran Sorcerer
+250
+030B01
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+164
+010215
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+250
+030002
+#
+# Dark Belra/Indi Belra
+250
+030B05
+#
+# Claw
+170
+01024D
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+151
+000905
+#
+# Dimenian/Arlan
+0
+000000
+#
+# La Dimenian/Merlan
+160
+030900
+#
+# So Dimenian/Del-D
+250
+030300
+#
+# Dragon/Sil Dragon
+255
+030500
+#
+# De Rol Le/Dal Ral Lie
+255
+030500
+#
+# Vol Opt/Vol Opt ver. 2
+255
+030500
+#
+# Dark Falz
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+164
+010218
+#

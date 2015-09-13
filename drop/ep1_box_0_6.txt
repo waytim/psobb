@@ -1,0 +1,69 @@
+# Tethealla Server Box Drop File
+# Episode: I, Section ID: Redria, Difficulty: Normal
+#
+# File layout: 
+#
+# Three lines per box.
+# First line is area the box is found in.
+# Second line is rare occurance rate.  Valid values from 0 to 255.
+# Third line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+6
+202
+020000
+#
+7
+193
+020000
+#
+5
+170
+000502
+#
+7
+172
+000502
+#
+10
+174
+000503
+#
+5
+170
+000902
+#
+7
+172
+000902
+#
+10
+174
+000903
+#
+8
+180
+030F00
+#
+2
+180
+030F00
+#
+5
+180
+030F00
+#
+6
+180
+030F00
+#
+8
+175
+030E23
+#
+10
+175
+030E24
+#
+9
+175
+030E25

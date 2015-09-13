@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Skyly, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+209
+008F01
+#
+# Hildeblue/Hildetorr
+249
+002D00
+#
+# Mothmant/Mothvert
+190
+000207
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+000F01
+#
+# Al Rappy/Pal Rappy
+221
+009900
+#
+# Savage Wolf/Gulgus
+209
+000E01
+#
+# Barbarous Wolf/Gulgus-gue
+185
+01030B
+#
+# Booma/Bartle
+209
+000207
+#
+# Gobooma/Barble
+209
+000707
+#
+# Gigobooma/Tollaw
+177
+010216
+#
+# Grass Assassin/Crimson Assassin
+190
+003900
+#
+# Poison Lily/Ob Lily
+209
+008B01
+#
+# Nar Lily/Mil Lily
+249
+008A00
+#
+# Nano Dragon
+190
+004100
+#
+# Evil Shark/Vulmer
+190
+002100
+#
+# Pal Shark/Govulmer
+190
+003400
+#
+# Guil Shark/Melqueek
+185
+010313
+#
+# Pofuilly Slime
+209
+000207
+#
+# Pouilly Slime
+249
+009A00
+#
+# Pan Arms
+190
+030D02
+#
+# Migium
+209
+008901
+#
+# Hidoom
+195
+010226
+#
+# Dubchic/Dubchich
+209
+000707
+#
+# Garanz/Baranz
+150
+030E04
+#
+# Sinow Beat/Sinow Blue
+177
+01012B
+#
+# Sinow Gold/Sinow Red
+190
+030D06
+#
+# Canadine/Canabin
+209
+000207
+#
+# Canane/Canune
+190
+008902
+#
+# Delsaber
+195
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+123
+001D00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+150
+009302
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+002E00
+#
+# Dark Belra/Indi Belra
+177
+010133
+#
+# Claw
+209
+000D01
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+190
+009400
+#
+# Dimenian/Arlan
+209
+000207
+#
+# La Dimenian/Merlan
+185
+01031B
+#
+# So Dimenian/Del-D
+150
+001F00
+#
+# Dragon/Sil Dragon
+215
+030D07
+#
+# De Rol Le/Dal Ral Lie
+238
+000207
+#
+# Vol Opt/Vol Opt ver. 2
+238
+000707
+#
+# Dark Falz
+209
+010227
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+209
+000707
+#

@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Viridia, Difficulty: Very Hard
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+216
+030D08
+#
+# Hildeblue/Hildetorr
+255
+000907
+#
+# Mothmant/Mothvert
+0
+000000
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+201
+030D13
+#
+# Al Rappy/Pal Rappy
+255
+000607
+#
+# Savage Wolf/Gulgus
+201
+000905
+#
+# Barbarous Wolf/Gulgus-gue
+201
+000D00
+#
+# Booma/Bartle
+201
+030D0F
+#
+# Gobooma/Barble
+201
+030D10
+#
+# Gigobooma/Tollaw
+209
+000406
+#
+# Grass Assassin/Crimson Assassin
+209
+030D0E
+#
+# Poison Lily/Ob Lily
+201
+000406
+#
+# Nar Lily/Mil Lily
+255
+010340
+#
+# Nano Dragon
+209
+000906
+#
+# Evil Shark/Vulmer
+201
+000E01
+#
+# Pal Shark/Govulmer
+201
+000905
+#
+# Guil Shark/Melqueek
+209
+000106
+#
+# Pofuilly Slime
+209
+000F00
+#
+# Pouilly Slime
+255
+010303
+#
+# Pan Arms
+216
+000907
+#
+# Migium
+216
+000906
+#
+# Hidoom
+216
+000906
+#
+# Dubchic/Dubchich
+209
+01031B
+#
+# Garanz/Baranz
+216
+000907
+#
+# Sinow Beat/Sinow Blue
+209
+030D01
+#
+# Sinow Gold/Sinow Red
+209
+001003
+#
+# Canadine/Canabin
+201
+000405
+#
+# Canane/Canune
+177
+010134
+#
+# Delsaber
+209
+030D03
+#
+# Chaos Sorcerer/Gran Sorcerer
+216
+008C00
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+201
+010127
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+216
+000907
+#
+# Dark Belra/Indi Belra
+209
+000606
+#
+# Claw
+201
+000405
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+209
+010226
+#
+# Dimenian/Arlan
+201
+000405
+#
+# La Dimenian/Merlan
+201
+000406
+#
+# So Dimenian/Del-D
+201
+001400
+#
+# Dragon/Sil Dragon
+229
+008901
+#
+# De Rol Le/Dal Ral Lie
+229
+008C01
+#
+# Vol Opt/Vol Opt ver. 2
+229
+008B01
+#
+# Dark Falz
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+201
+010221
+#

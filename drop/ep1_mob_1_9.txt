@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Whitill, Difficulty: Hard
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+216
+000505
+#
+# Hildeblue/Hildetorr
+255
+001400
+#
+# Mothmant/Mothvert
+0
+000000
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+201
+030D13
+#
+# Al Rappy/Pal Rappy
+255
+000506
+#
+# Savage Wolf/Gulgus
+201
+000105
+#
+# Barbarous Wolf/Gulgus-gue
+201
+000605
+#
+# Booma/Bartle
+201
+030D0F
+#
+# Gobooma/Barble
+165
+030D10
+#
+# Gigobooma/Tollaw
+216
+000805
+#
+# Grass Assassin/Crimson Assassin
+209
+030D0E
+#
+# Poison Lily/Ob Lily
+201
+000605
+#
+# Nar Lily/Mil Lily
+255
+000D00
+#
+# Nano Dragon
+216
+000505
+#
+# Evil Shark/Vulmer
+201
+000105
+#
+# Pal Shark/Govulmer
+201
+000605
+#
+# Guil Shark/Melqueek
+216
+000805
+#
+# Pofuilly Slime
+201
+030B05
+#
+# Pouilly Slime
+255
+000506
+#
+# Pan Arms
+216
+000505
+#
+# Migium
+216
+000105
+#
+# Hidoom
+216
+000605
+#
+# Dubchic/Dubchich
+201
+000605
+#
+# Garanz/Baranz
+209
+000506
+#
+# Sinow Beat/Sinow Blue
+201
+000605
+#
+# Sinow Gold/Sinow Red
+216
+000805
+#
+# Canadine/Canabin
+201
+000605
+#
+# Canane/Canune
+216
+030A00
+#
+# Delsaber
+209
+030A00
+#
+# Chaos Sorcerer/Gran Sorcerer
+216
+000505
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+164
+010123
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+209
+000506
+#
+# Dark Belra/Indi Belra
+216
+000505
+#
+# Claw
+201
+000105
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+201
+000505
+#
+# Dimenian/Arlan
+201
+000605
+#
+# La Dimenian/Merlan
+201
+000105
+#
+# So Dimenian/Del-D
+216
+000505
+#
+# Dragon/Sil Dragon
+225
+008900
+#
+# De Rol Le/Dal Ral Lie
+225
+008C00
+#
+# Vol Opt/Vol Opt ver. 2
+225
+008B00
+#
+# Dark Falz
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+201
+01021F
+#

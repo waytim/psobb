@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Purplenum, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+002C00
+#
+# Hildeblue/Hildetorr
+249
+004500
+#
+# Mothmant/Mothvert
+190
+000307
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+190
+004400
+#
+# Al Rappy/Pal Rappy
+249
+010133
+#
+# Savage Wolf/Gulgus
+209
+000807
+#
+# Barbarous Wolf/Gulgus-gue
+185
+01030B
+#
+# Booma/Bartle
+209
+000807
+#
+# Gobooma/Barble
+190
+001400
+#
+# Gigobooma/Tollaw
+150
+001F00
+#
+# Grass Assassin/Crimson Assassin
+177
+010134
+#
+# Poison Lily/Ob Lily
+209
+000807
+#
+# Nar Lily/Mil Lily
+195
+001D00
+#
+# Nano Dragon
+150
+009304
+#
+# Evil Shark/Vulmer
+209
+000D01
+#
+# Pal Shark/Govulmer
+209
+008B01
+#
+# Guil Shark/Melqueek
+190
+006800
+#
+# Pofuilly Slime
+209
+000E01
+#
+# Pouilly Slime
+249
+008B02
+#
+# Pan Arms
+190
+003900
+#
+# Migium
+209
+000807
+#
+# Hidoom
+185
+010307
+#
+# Dubchic/Dubchich
+185
+010335
+#
+# Garanz/Baranz
+190
+030D0A
+#
+# Sinow Beat/Sinow Blue
+190
+030E08
+#
+# Sinow Gold/Sinow Red
+150
+030E04
+#
+# Canadine/Canabin
+177
+01022B
+#
+# Canane/Canune
+190
+006C00
+#
+# Delsaber
+195
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+150
+030E0A
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+177
+010216
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+190
+030D04
+#
+# Dark Belra/Indi Belra
+190
+030D0B
+#
+# Claw
+209
+008C01
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+177
+01012A
+#
+# Dimenian/Arlan
+190
+009200
+#
+# La Dimenian/Merlan
+190
+001200
+#
+# So Dimenian/Del-D
+190
+004C00
+#
+# Dragon/Sil Dragon
+238
+000807
+#
+# De Rol Le/Dal Ral Lie
+238
+000307
+#
+# Vol Opt/Vol Opt ver. 2
+215
+00A300
+#
+# Dark Falz
+209
+010232
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+150
+008F03
+#

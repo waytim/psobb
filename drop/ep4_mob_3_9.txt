@@ -1,0 +1,97 @@
+# Tethealla Server Monster Drop File
+# Episode: IV, Section ID: Whitill, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Astark
+190
+010348
+#
+# Yowie
+185
+01014F
+#
+# Satellite Lizard
+190
+01014D
+#
+# Merissa A
+209
+01034A
+#
+# Merissa AA
+243
+010152
+#
+# Girtablulu
+190
+00AA00
+#
+# Zu
+190
+00AD03
+#
+# Pazuzu
+243
+00B300
+#
+# Boota
+209
+00C800
+#
+# Za Boota
+185
+01035B
+#
+# Ba Boota
+190
+01013B
+#
+# Dorphon
+190
+010141
+#
+# Dorphon Eclair
+243
+00B600
+#
+# Goran
+209
+010150
+#
+# Goran Detonator
+209
+00AD03
+#
+# Pyro Goran
+185
+010146
+#
+# Sand Rappy
+155
+010154
+#
+# Del Rappy
+216
+010357
+#
+# Saint Million
+229
+010289
+#
+# Shambertin
+229
+01035A
+#
+# Kondrieu
+249
+00AB00
+#

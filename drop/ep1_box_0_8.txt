@@ -1,0 +1,45 @@
+# Tethealla Server Box Drop File
+# Episode: I, Section ID: Yellowboze, Difficulty: Normal
+#
+# File layout: 
+#
+# Three lines per box.
+# First line is area the box is found in.
+# Second line is rare occurance rate.  Valid values from 0 to 255.
+# Third line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+6
+202
+020000
+#
+7
+193
+020000
+#
+2
+175
+030F00
+#
+2
+175
+030F00
+#
+3
+175
+030F00
+#
+7
+175
+030F00
+#
+8
+175
+030E23
+#
+10
+175
+030E24
+#
+9
+175
+030E25

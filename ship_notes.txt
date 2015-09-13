@@ -1,0 +1,1509 @@
+version 0.141 04/21/2010
+------------------------
+- Oops, left out the >= level 100 check for special mags.
+- Adjust the code for rare monster appearance slightly. (Will still work
+with your old values...)
+
+
+version 0.140 04/15/2010
+------------------------
+- Mag evolution code mostly redone.  Thanks to Lee providing disassembled
+PSOBB code to use for it's implementation.  (Now I just need some goons to
+test it for me!  Hopefully it fixes mag desyncing... Let me know!)
+
+
+version 0.139 04/14/2010
+------------------------
+- Fixed infinite loop problem when starting battle quests.  (New bug since
+v0.135)
+
+
+version 0.138 03/28/2010
+------------------------
+- Fixed problem with Claire's Deal quest.  Items taken from Claire's deal reward
+would reappear at the last place you dropped a stack of items at.  If you never
+dropped any stack of items, they would appear at coordinates 0,0,0.
+(There may have been other quests that were affected by this too, but I don't
+think so.)
+
+
+version 0.137 03/26/2010
+------------------------
+- Fixed common bank being overwritten by character bank during auto save
+while at the bank.
+
+
+version 0.136 03/26/2010
+------------------------
+- Added a common bank.  Access by using the /bank command before talking to
+the teller.  Use /bank to switch between the character and common bank.
+
+
+version 0.135 03/26/2010
+------------------------
+- Some more tweaks to the item procedures.  Please update to this client 
+version.  Thanks!
+
+
+version 0.134 03/25/2010
+------------------------
+- Fixed drop problem with Sinow Spigell (Thanks Lee and Rika)
+- Fixed an item corruption issue which can be caused when juggling 
+items on characters who've used materials.  Maybe! (Thanks Lee and Schthack)
+
+(Big gap between this update and the last, there will be another update 
+sometime soon to fix some quest opcodes and the parsing of the itempt file.
+The item corruption issue may need further looking into, but requires more
+testing to see if this helped anything at all.)
+
+
+version 0.133 09/30/2009
+------------------------
+- Changed CleanUpInventory, CleanUpBank, and SendItemToEnd procedures... 
+again.
+- Added "/debug" command to save character data files in the ship server.
+This command can be used by everyone, once per connection to a block.
+When this command is used, a file named "gc#charname.bbc" is created
+in the same folder as ship_server.exe
+This will make it easier for people who run servers to send me glitched
+character data so I can, hopefully, have more insight into the elusive
+"???" problem as I still cannot replicate it and no one has figured out
+a definitive way to make it occur yet.
+
+
+version 0.132 08/20/2009
+------------------------
+- Made some modifications to free_game_item and CleanUpGameInventory
+procedures.  There was actually a bug in the free_game_item procedure.
+- Increased the maximum number of saved items by the ship per lobby.
+
+These were added in hopes to combat the XXX item problem that seems to
+still be occuring.
+
+Still don't know what could be causing it, but maybe this will fix it?
+
+Anyway, if it doesn't, please note what occured exactly when the problem
+did occur and try your best to reproduce it so I can fix it.
+
+Thank you in advance!
+
+
+version 0.131 08/18/2009
+------------------------
+- I'm not exactly sure what causes the extremely rare condition
+in which some users inventories, past a certain point, become 
+XXX items when managing their inventories or bank, but I've done
+some modifications to the CleanUpInventory and CleanUpBank
+procedures in hopes that it would combat that.
+
+If the XXX item problem still happens, there must be some other
+issue and I don't think I will be able to figure it out on my 
+own.  That is to say, the conditions which cause it, since I don't
+run my own server anymore.
+
+I ask that people update to Ship Server 0.131 and, should the XXX
+item problem occur again, please try your best to remember the
+conditions in which it occured so that it can be troubleshooted.
+
+Thanks!
+
+
+version 0.130 08/17/2009
+------------------------
+- Fixed security problem with ships registering on the ship gate.
+This version of the ship server can only be used with
+Login Server v.045 and higher.
+
+
+version 0.129 07/30/2009
+------------------------
+- Fixed a major bug with generation of armors and shields as
+well as selling of armors and shields which was introduced in
+v.126 by loading the wrong column from armorpmt.ini and shieldpmt.ini
+for the DFP and EVP variables.
+
+This would also lead to the server meseta value being desynced from
+the client.
+
+
+version 0.128 07/29/2009
+------------------------
+- Fixed conversion of MILLE MARTEAUX not saving when made 
+without a fully grinded Heaven Punisher or Ophelie Seize.
+For some reason I was under the impression that the client
+didn't allow this item to be created unless you grinded your
+previous weapons, but that's not the case.
+
+
+version 0.127 07/24/2009
+------------------------
+Fixed the saving of the following conversions:
+
+Sealed J-Sword -> Tsumikiri J-Sword
+Lame d'Argent -> Excalibur
+Limiter -> Adept
+Swordsman Lore -> Proof of Sword-Saint
+
+
+version 0.126 07/21/2009
+------------------------
+- The files armorpmt.bin and weappmt.bin are no longer used by
+the server.  New files armorpmt.ini, shieldpmt.ini, tech.ini and
+weaponpmt.ini are now loaded instead.
+
+These files are generated by Lee from schtserv.com's BB PMT editor
+program.  You can find this program on the forum.
+
+Yes, you may have noticed there is a brand new technique file when
+there was no older counterpart.  The technique table in def_tables.h
+has been nuked completely and you can change the maximum technique
+levels yourself now.  (You will still need to update the PMT file and
+send it via the login server... GL!!!)
+
+A file named itempmt.bin is still included with the ship server, but
+it is not read.  It is simply included for use with Lee's program and
+a PRS compressor program for sending via the login server.
+
+
+version 0.125 07/16/2009
+------------------------
+- Noticed a similar bug would occur during upgrading of a weapon's
+Photon in Gallon's Shop quest.  Fixed.
+
+
+version 0.124 07/16/2009
+------------------------
+- Finally figured out why ADD SLOT and changing items sometimes
+works and sometimes doesn't.  Put a definitive fix in place!
+- Should have also fixed Mag desyncing for good as well! (Well,
+I think so, as this problem was related to item changing as well..)
+
+If you want me to be technical about it:  In the previous Ship
+servers, your inventory was scanned during UseItem for the current
+inventory slot of the currently equipped weapon, armor and shield
+BEFORE the consumable item was deleted and CleanUpInventory was 
+called.  My CleanUpInventory procedure shifts up all item data 
+in memory after an item is deleted from inventory.
+
+For example:  Say you have four items in memory.  They look like this
+in memory "1234".  If you use consumable item 3 and CleanUpInventory is
+called, the items in memory now look like "124".  Where the 4th item
+now moved from slot 4 to slot 3.  
+
+This caused a problem before because I did the scan BEFORE CleanUpInventory,
+so if you had the ADD SLOT item in slot 3 but the armor to use the
+ADD SLOT on in slot 4, after the shift, it would attempt to modify the
+number of slots in slot 4 instead of slot 3, where the armor now resides.
+This has been corrected.
+
+Same thing would happen if you merged weapons together and the weapon to 
+delete came before the weapon to keep and so on.
+
+This problem also reared it's head during Mag feeding when inventory was
+scanned and a pointer to the Mag was made BEFORE deleting the consumable
+item in inventory.  So stats that were being checked, evolutions, and
+data being modified could have been thrown all out of whack.
+
+
+version 0.123 07/13/2009
+------------------------
+- Updated mag tables and code to those provided by Lee from 
+schtserv.com
+- Fixed Merge making.  (Red, Yellow, Gifoie, Shifta, etc.)
+
+
+version 0.122 05/08/2009
+------------------------
+- Fixed a data corruption issue which occured when idling
+on the ship select or block selection menu after 5 minutes.
+(Thanks to piborox for reporting this!  Been trying to
+figure out these data corruption reports I could not
+reproduce!!)
+
+
+version 0.121 01/22/2009
+------------------------
+- Fixed detection of battle rules when using 
+non-english quest files. (I think... ;))
+- Added /setpass command.
+- Fixed a source code typo for checking arguments
+for certain commands.
+
+
+version 0.120 12/25/2008
+------------------------
+- Implemented global cooldown for all team commands.
+(Can cause overflow in the lobby which can lead to
+disconnections... again, thanks to HWC for pointing it out
+by disconnecting Sylvanet users in the lobby, LOL)
+
+
+version 0.119 12/25/2008
+------------------------
+- Prevented all 6D packets from being sent in the lobby.
+(Thanks go to HEWHOCORRUPTS for pointing out this oversight
+using his colorful methods.)
+
+
+version 0.118 12/23/2008
+------------------------
+- Fixed a fatal crashing bug caused by a malformed game
+join packet.  (Bug has existed since the beginning of
+ship server but has only been exploited recently with
+the public release of a working proxy...)
+
+
+version 0.117 12/23/2008
+------------------------
+- Forgot to comment out the PMT dumping procedure I was 
+playing around with... now this version actually works. ;)
+
+
+version 0.116 12/23/2008
+------------------------
+- Temporarily blocked the Master Transfer function of teams.
+(Until I can be bothered to connect to a server with a proxy
+and look at the packet to better disassemble it as it can be
+used to cause FSODs when tampered with...)
+- Increased the delay time out for team flag switching to
+5 seconds.
+- Fixed a bug, hopefully, with the /dcall GM command.
+- Local GMs and global GMs can no longer be banned with the ban
+commands.
+
+version 0.115 12/3/2008
+-----------------------
+- Implemented a cooldown on the RequestTeamList procedure.
+
+
+version 0.114 12/1/2008
+-----------------------
+- Very small bug fix to team system.  Had commented something
+out in the source that needed to be uncommented.
+
+
+version 0.113 11/30/2008
+------------------------
+- Lobby count exploit fixed.  Thanks to HEWHOCORRUPTS
+for reporting and exploiting this for me.  :)
+
+
+version 0.112 11/19/2008
+------------------------
+- Fixed appearance rate of Charge special from untekked
+weapons.
+
+
+version 0.111 11/18/2008
+------------------------
+- Now supporting the opcode for Good Luck quest.
+Quest requires a Secret Ticket to be exchanged with one
+of the many rappies in the quest for an item.
+
+
+version 0.110 11/17/2008
+------------------------
+- Fixed bug where finding hit percentage attached on a
+weapon would just about never happen.  This bug occured
+after the implementation of ItemPT.  (Thanks to 
+wangzheng8188 for reporting it...)
+
+Please note that the chance for hit percentage to be 
+attached to a found weapon is low and tops out at about
+5% in Episode I, even less in Episode II.  This is defined
+by the ItemPT file and can be changed by a ship owner
+easily.
+
+
+version 0.109 11/11/2008
+------------------------
+- Fixed disconnection errors when playing solo quests with 
+NPCs that cast techniques when your current class cannot
+cast techniques or cannot cast the level or technique
+the NPC casts.
+
+
+version 0.108 11/7/2008
+-----------------------
+- Fixed the technique checking code I had.  It would disconnect
+some classes when casting techniques above level 7...
+I found out that the level isn't properly portrayed in the packet
+I was checking, so I've reworked the technique checking code.
+
+Your technique levels are now only checked when someone joins
+a game.  Also, you are now prevented from learning techniques
+your class isn't allowed to learn.
+
+You still are disallowed from casting techniques your class is
+not allowed to cast.  (So HUmars can't cast Grants, etc.)
+
+
+version 0.107 11/6/2008
+-----------------------
+- Fixed problem with only being able to have max 6 users on at
+a time.  (Was broken since v.104)
+
+
+version 0.106 11/6/2008
+-----------------------
+- Now disallows classes from being able to cast techniques they
+shouldn't be able to.
+- Momoka's Item Present quest opcode now supported.  Required
+item for quest is /item 03120900,,,,
+How you will get this item to your users is a story you make
+up yourself!  (I plan to automatically drop one in each
+character's bank on the Alpha server at Christmas time :))
+
+Note:  You will have to update your unitxt_shop_j.prs and
+unitxt_j.prs file when playing this quest or your client will
+freeze when talking to Momoka.
+
+
+version 0.105 11/5/2008
+-----------------------
+- Technique dropping table for Episode II was never initialized.
+This has now been fixed. (Thanks to sad for pointing it out!)
+
+
+version 0.104 11/4/2008
+-----------------------
+- "Promote Teamwork" Edition!
+
+I've added an intentional change from the way SEGA does things
+re: Government quests.
+
+You already saw the start of it in 0.103 with the restriction of
+players joining government quests for which they weren't qualified
+for.  However, they weren't stopped from joining a game in which
+a government quest was about to be started for which they weren't
+qualified for.  This has now been changed.
+
+Now, when the party leader accesses the government quest list,
+the highest quest for which the party is qualified for will be
+shown.  So, if player 1 has played and completed up to 4-3 and 
+player 2 has played and completed up to 1-2 and player 3 has
+played and completed up to 2-1, only quests up to 1-3 will be
+displayed at the counter.
+
+Help each other progress through the game!  (Hence the "Promote
+Teamwork" Edition!)
+- IP connection spam check changed.  Connections will no longer be
+blocked.  There is now a maximum amount of connetions per IP
+address and when that is exceeded, the oldest connection is
+disconnected automatically.
+- Only works with Login v0.042 or higher.
+
+
+version 0.103 11/1/2008
+-----------------------
+- It is now no longer possible to complete government quests out
+of order.
+
+Previously, for example, a player could join a 3-2 game in progress
+when they only had completed up to 2-1.  Then, when the
+player clears the 3-2 game, they find out they can now pick 3-3
+from the government quest list.  This has been corrected.
+
+In addition to this, players can also no longer join government
+quests for which they are not qualified to join.  So, using the
+previous example, if the player who's only completed up to 2-1
+requests the lobby game list and sees a 3-2 game in progress,
+that game is greyed out.  Attempted to join the game will inform
+the player that they need to progress further in the game to
+be able to join that quest.
+
+
+version 0.102 10/30/2008
+------------------------
+- Removed NiGHTS NPC support (for now), added
+/npc 8 (Momoka)
+/npc 9 (Irene)
+/npc 10 (Guild Lady)
+/npc 11 (Nurse)
+
+Use in conjunction with the NPC patch files, for your patch
+server, located @ http://www.pioneer2.net/npc_patch_103008.zip
+
+
+version 0.101 10/29/2008
+------------------------
+- Fixed Battle Rule #4's starting level in the code.
+(Was set to level 1 when in reality, the clients start
+at level 2.)
+- Fixed command trigger to reset battle stats when
+restarting game.
+
+
+version 0.100 10/28/2008
+------------------------
+- Some modifications to the equip item procedures in hopes that
+it doesn't lose track of the currently equipped item...
+- Also made some changes to the fetch character data procedure
+which checks to see if there is more than one weapon, armor,
+shield or mag equipped in the data for any reason.  Should it
+encounter more than one of either equipped, it will un-equip
+everything.
+- Fixed a bug in battle mode where your permanent material usage
+could be messed up.
+- Fixed level sync bugs in battle mode.
+- Added remaining battle modes.  (Update your quest.lst file in the
+battle folder to the one in the ship archive...)
+- Battle records still not saving at the moment...
+
+
+version 0.099 10/24/2008
+------------------------
+- Plugged a permanent level up exploit created with the battle
+mode additions.  ;o
+
+
+version 0.098 10/24/2008
+------------------------
+- Half-ass fix for client input lockup when removing a team member
+from a team.
+
+
+version 0.097 10/24/2008
+------------------------
+- Reduced amount of memory used.
+- Preliminary battle mode support.  Free roam battle and Rule #1 are
+the only battle types supported.  (Other rules will work soon, I just
+need to log all the starting equipment from the other rules...)
+Battle records do NOT save at the moment.
+(Be sure to copy the new battle.ini and battle/quest.lst from the 
+ship archive's quest folder to your own ship's quest folder.)
+
+
+version 0.096 10/22/2008
+------------------------
+- Some code optimizations.  (Mainly reduced the use of "memcpy" in 
+the code a great deal...)
+- Update to internal version number.  Expects login_server v.040
+
+
+version 0.095 10/22/2008
+------------------------
+- Adjustments made to Episode I solo quest access system.
+Black Paper now shows up correctly, while requirements for Letter from
+Lionel and Central Dome Fire Swirl were changed.
+(Thanks to sad for pointing these out...)
+- Startup time reduced.
+
+
+version 0.094 10/20/2008
+------------------------
+- Fixed bug where SJS and Lame d'Argent counters would reset on
+sign off.
+
+
+version 0.093 10/20/2008
+------------------------
+- Fixed ADD SLOT bug when armor is in the second inventory slot.
+- Some minor code cleanup.
+- Source code release.
+
+
+version 0.092 10/15/2008
+------------------------
+- Fixed problem with monsters not being able to be damaged by other
+players.  (I think ;))
+- Now distributed under GPL (General Public License) version 3.
+
+
+version 0.091 10/12/2008
+------------------------
+- Wasn't properly making itself visible when an error occured.  Fixed.
+
+
+version 0.090 10/12/2008
+------------------------
+- Once again saves user data every 5 minutes.
+- Ship server starts minimized to tray, unless an error occurs.
+You can double click the tray icon to change the visibility of the
+ship server.
+
+
+version 0.089 10/07/2008
+------------------------
+- Fixed to work with the new login server fix for an account
+logging on more than once.
+- Only works with login 0.035+
+
+
+version 0.088 10/06/2008
+------------------------
+- Fixed "fixed" box drops for weapons and armor being off.
+This will solve the LIGHT RELIEF problems in Respective Tomorrow
+among other things...
+
+
+version 0.087 10/02/2008
+------------------------
+- Small bug fix to the bank procedures.
+
+
+version 0.086 10/01/2008
+------------------------
+- Stopped charge special from disconnecting when lack of meseta.
+- Some disconnection messages removed.
+- Some disconnection messages changed.
+- When a user attempts to request a quest reward not in the allow
+list, a banner appears on their screen and the request is logged
+to the ship log along with their guild card information.  The
+user is no longer disconnected.
+
+
+version 0.085 9/28/2008
+-----------------------
+- Corrected S-Rank King's special again.
+- Corrected required player level to enter difficulties for each
+episode to be identical to the Japanese server.
+
+
+The new required levels are...
+
+Episode I:
+
+Hard: 20
+V.Hard: 50
+Ultimate: 90
+
+Episode II:
+
+Hard: 30
+V.Hard: 60
+Ultimate: 100
+
+Episode IV:
+
+Hard: 40
+V.Hard: 70
+Ultimate: 110
+
+
+version 0.084 9/28/2008
+-----------------------
+- Shop weapon calculation should now be pretty damn accurate.
+Problems with it, let me know!
+- Re-enabled disconnection at bank for depositing more meseta
+than you have.
+- Truly fixed S-Rank equippable information this time.
+- Fixed Love Rappy drop index.  Love Rappies should appropriately
+drop their rare now.
+
+(You will have to copy the new weappmt.bin in the archive's param
+folder to your own param folder or else the ship will fail to
+start.)
+
+
+version 0.083 9/27/2008
+-----------------------
+- Adjust some calculations for the shop again.  Weapon calculation
+is still off... I'm making progress and have figured out a key
+thing in generating weapon prices.
+
+Right now the calculation is really close but will now sometimes
+give you an extra meseta instead of shortchanging you. >_>
+
+- You will no longer be disconnected from the bank, temporarily,
+if your meseta count is not what the server expects.  However, you
+will only be able to deposit what the server thinks you have.
+(You can sync your meseta by depositing it all into the bank,
+leaving the bank, revisiting the bank and withdrawing it if need be...)
+
+
+version 0.082 9/27/2008
+-----------------------
+- Found a bug in the new shop code with shields.
+- Changed shop code to give minimum amount of meseta when armor
+or shield is sold with variation past limits.
+
+
+version 0.081 9/26/2008
+-----------------------
+- Changed Hit Material's frequency to 0 instead of dropping a
+monomate instead.
+- Fixed server meseta count being off after selling grinded common
+weapons, common equipment with variable stats, and techniques to the
+shop. (This would cause the server to disconnect you when buying
+things from the shop or depositing gained meseta after selling items
+from an area run.)
+
+Please remember to copy shop2.dat from the archive's shop folder into
+your own shop folder or else the ship will not load.
+
+- Fixed S-Rank equippable information.
+- S-Rank King's special now works.
+- Fixed slime splitting bug where sometimes non-rare slimes, split from
+another, didn't appear rare when they should have.
+- Changed the way created items appear in the GM log.
+- New GM command /give only usable by global GMs.
+It functions the same as /item, mostly, 'cept the item appears directly
+in your inventory instead of on the ground first.
+
+
+version 0.080 9/21/2008
+-----------------------
+- Problem of "????" dropping occasional from enemies fixed.
+The item that was trying to drop is Hit Material, but that item does not
+exist.  So now, it'll drop a monomate instead to shaft you.
+
+
+version 0.079 9/21/2008
+-----------------------
+- Small tweak to weapon drop routine.
+- Supports the NiGHTS skin if new config option in ship.ini is set to 1.
+Use /npc 11 to use the NiGHTS skin if installed on the client.  (Would
+advise to add the patch for NiGHTS to your server's patch server as well...)
+
+
+version 0.078 9/20/2008
+-----------------------
+- Corrected too much meseta dropping from Falz and Episode IV bosses.
+(Forgot to copy their meseta values AFTER I swapped the high/low byte when
+loading the ItemPT...)
+
+
+version 0.077 9/20/2008
+-----------------------
+- Made a small tweak to the ParseMapData procedure for monsters which
+use the floating point value to determine whether or not they're
+a different type or not.
+(The tweak was something I should have done a long time ago when
+I found out the values were floating points, but I never got around to it.
+It should fix the occasional problem with Poison Lillies reading as
+Nar Lillies... among other occasional mix-ups.)
+
+
+version 0.076 9/19/2008
+-----------------------
+- Fixed setting of equipment flags.
+- Fixed equipment flag checking when equipping items.
+- Fixed max material usage for humans due to now fixed broken flags.
+- Modification to remap data for Episode IV enemies Girtablulu,
+Zu, Pazuzu, Dorphon, and Dorphon Eclair.
+
+As stated before, I have no ItemPT data for Episode IV, so I remap
+Episode IV enemies to Episode I & II enemy data for drop anything rates
+and meseta drops.
+
+This is how the current table looks like:
+
+unsigned ep4_ptremap[] = 
+{
+	0x00, 0x00, // None to None
+	0x01, 0x01, // Remap Astark to Hildebear
+	0x02, 0x08, // Remap Yowie to Barbarous Wolf
+	0x03, 0x07, // Remap Satellite Lizard to Savage Wolf
+	0x04, 0x13, // Remap Merissa A to Poufilly Slime
+	0x05, 0x14, // Remap Merissa AA to Pouilly Slime
+	0x06, 0x38, // Remap Girtablulu to Mericarol
+	0x07, 0x37, // Remap Zu to Gi Gue
+	0x08, 0x02, // Remap Pazuzu to Hildeblue
+	0x09, 0x09, // Remap Boota to Booma
+	0x0A, 0x0A, // Remap Ze Boota to Gobooma
+	0x0B, 0x0B, // Remap Ba Boota to Gigobooma
+	0x0C, 0x48, // Remap Dorphon to Delbiter
+	0x0D, 0x02, // Remap Dorphon Eclair to Hildeblue
+	0x0E, 0x29, // Remap Goran to Dimenian
+	0x0F, 0x2B, // Remap Goran Detonator to So Dimenian
+	0x10, 0x2A, // Remap Pyro Goran to La Dimenian
+	0x11, 0x05, // Remap Sand Rappy to Rappy
+	0x12, 0x06, // Remap Del Rappy to Al Rappy
+	0x13, 0x2F, // Remap Saint Million to Dark Falz
+	0x14, 0x2F, // Remap Shambertin to Dark Falz
+	0x15, 0x2F, // Remap Kondrieu to Dark Falz
+};
+
+The reason I picked Hildeblue for Pazuzu and Dorphon Eclair is to
+have a drop anything rate and meseta drop similar to a rare monster.
+
+I could have also used Nar Lily for either of those, since it wasn't
+used yet, but... just figured I'd use Hildeblue for both.  Don't
+think it makes a big difference.
+
+Please note that the remapping of monsters does not affect what
+type of rare items they drop.  Only how much meseta they will drop,
+if they will drop anything at all, and their "common" drop.
+
+Enemies can have 0, 1, 2 or 3 defined as their common drop in the
+ItemPT file.
+
+Enemies always have a chance to drop a tool or meseta, but when
+they drop neither, they drop their common drop.  Which is
+defined as:
+
+0 - Weapons
+1 - Armor
+2 - Shields
+3 - Units
+
+So, the Episode IV monsters currently also borrow the common drop
+information as well.
+
+The common drop information can probably be corrected by playing
+on the Japanese server and noting the type of drop an enemy has
+when they don't drop a tool or meseta, though this would have to
+be done for every enemy for every section ID in every difficulty.
+
+Someone will probably get around to it sometime, but for now this
+will have to do!
+
+- Gave Dark Falz, Olga Flow, and Saint Million meseta drops.
+- Now correctly setting weapons as untekked for Black Paper's Deal
+missions.
+- Meseta reward changed for Black Paper's Deal 1.
+
+
+version 0.075 9/19/2008
+-----------------------
+- Only works with logon v0.030 or higher.
+- Some optimizations made to the weapon drop routine.
+- Some optimizations made to the technique drop routine.
+- Global announce supported.  New command /global for global
+GMs only.  Use in the same fashion as /announce
+- /announce and /global can be cancelled out of, before 
+making an announcement, by using the command again without
+sending a mail.
+- You can now color announcements.  Use the $ symbol in the
+same fashion as the patch server, etc.
+
+Color list:
+
+$C0 Black
+$C1 Blue
+$C2 Green
+$C3 Cyan
+$C4 Red
+$C5 Purple
+$C6 Yellow
+$C7 White
+$C8 Pink
+$C9 Violet
+$CG V2 color cycle
+
+
+version 0.074 9/19/2008
+-----------------------
+- Fixed some bugs with the technique drop routine.
+
+
+version 0.073 9/18/2008
+-----------------------
+- Modified Episode IV enemy meseta drops as well as drop anything rates
+by using a remap table.  (Since there is no real ItemPT.gsl file with
+Episode IV data that's publicly available...)
+- Fixed specials being applied to some rare weapons. (Oops...!)
+- Fixed rare weapon drops from not being untekked when dropped.
+
+
+version 0.072 9/18/2008
+-----------------------
+- Only works with logon v0.029 or higher.
+- Old Tethealla client executables no longer can connect to this
+ship server.  Users must update their executables for both
+Vista and XP.
+- Fixed a bug, actually caused by data in the ItemPT file, which
+sometimes caused enemies to drop 999,999 meseta.
+- Techniques can no longer be used in town.  (Telepipes still work,
+though, but not for long...)
+
+
+version 0.071 9/17/2008
+-----------------------
+- Fixed random "fixed" type quest box drops from always dropping weapons
+instead of their proper type.
+- Removed debug "boxdata offset" text from the console window. (Oops!)
+
+
+version 0.070 9/17/2008
+-----------------------
+- Replies to ping requests sent by the logon server.
+If the ship hasn't received a request from the logon server in over a minute,
+the ship will terminate the connection with the logon server and attempt
+to reconnect.
+- Reconnect number of seconds has been reduced from 30 seconds to 15 seconds.
+
+
+version 0.069 9/17/2008
+----------------------
+- Fully fixed boxes which have null data for the item to drop now
+drop random items.
+
+
+version 0.068 9/17/2008
+-----------------------
+- Due to some code optimizing I was doing, I broke fixed box drops in
+quests.   It has been corrected now.
+- Fixed meseta drops from fixed boxes.
+- Fixed unit drops from boxes and enemies.
+- Adjustment made to enemy drops.  Looks like tools are supposed to have
+a random chance to be dropped from all enemies and it's not set in the
+ItemPT's enemy drop data.
+
+
+version 0.067 9/16/2008
+-----------------------
+- Finally fixed the Tekking bugs with the specials.  No more ??? weapons
+that don't get any attributes.  Should stop weapons from detekking as well.
+
+
+version 0.066 9/16/2008
+-----------------------
+- Swear I glanced over some stuff before I released 0.064, but apparently
+I missed a very obvious bug.
+
+
+version 0.065 9/16/2008
+-----------------------
+- Had to make an adjustment to the enemy drop anything rate grabber.
+
+
+version 0.064 9/16/2008
+-----------------------
+- Loading most of the ItemPT file now.  This file controls a great deal
+of common drops based on section IDs.  The following things from
+ItemPT have been implemented in the server:
+
++ Weapon ratios
++ Weapon ranks
++ Weapon grind
++ Weapon percentage
++ Weapon element
++ Armor ranks (not implemented via ItemPT... yet)
++ Armor slots
++ Unit types
++ Various tool frequencies including techniques
++ Technique levels
++ Enemy drop rate
++ Enemy meseta
++ Enemy drop type
++ Box Meseta
+
+What hasn't been implemented from the file (due to my lack of
+understanding on it):
+
+- Armor and shield ranks (both minimum and maximum)
+- Anything else I didn't mention which this file may hold...
+
+Although this corrects several things with items, I'm sure my 
+interpretation of it will need to be tweaked here and there.
+(That's where YOU come in!)
+- Now loading the object data for the default maps when playing
+without having a quest loaded from the guild counter.  (So fixed
+box drops for normal games work...)
+- The structure of ship.ini has changed.  There are no longer individual
+parameters for monster and box drops.  There are now only 5 common settings
+for "fully random" boxes which control weapons, armor, mags, tools, and
+meseta drops.
+
+When a "tool" drops, it uses the frequency table inside of the ItemPT
+file to determine which individual tool to drop.
+
+Please see the example ship.ini for details.
+
+- Don't forget to copy the ItemPT.gsl file from the archive's param folder
+into your own ship's param folder!
+
+
+version 0.063 9/15/2008
+-----------------------
+- Knight/Power no longer drops on all difficulty levels nor as often.
+- Rebalanced the common equipment drop function.
+Now, as far as what drops when an equipment roll happens,
+chances are Weapons > Armor > Shields > Units ...
+
+
+version 0.062 9/15/2008
+-----------------------
+- Corrected problem with attributes while tekking.  (Now doesn't
+jump through tiers and such...)
+- Made it harder to get attribute to change while tekking.
+- More common for weapons with no special to drop.
+(Hopefully also corrected ??? weapons dropping with no special...)
+- Now harder to get higher slot armors.
+
+
+version 0.061 9/15/2008
+-----------------------
+- Fixed mag stats when a rare drop.
+- No longer reads name colors from ship.ini, the colors are passed
+to the ship server from the login server.
+
+You can delete this extra information out of your ship.ini as those
+lines may be used later for something else...
+- Only works with Login v.023
+
+
+version 0.060 9/14/2008
+-----------------------
+- Fixed bank bug related to tool items that were non-stackable.
+- Some other item code optimization and fixes.
+- Requires Login version 0.015 to operate.
+
+
+version 0.059 9/14/2008
+-----------------------
+- Kill counters for Sealed J-Sword, Lame d'Argent, Limiter and
+Swordsman Lore implemented.
+- Fixed Ramar getting Android exp boost and fixed Racast NOT getting
+Android exp boost.  (Oops!)
+
+
+version 0.058 9/13/2008
+-----------------------
+- (Technical shit) DA packet isn't sent when joining a lobby anymore.
+67 packet now has the ship event in it.  DA is now only sent when the
+event is changed by a GM.
+- Global and local GM name color is now configurable via ship.ini,
+please check the default ship.ini for details.
+- Local ban support added.
+
+Use /ban gc# to ban via guild card number.
+/ipban gc# to ban via IP address.
+/hwban gc# to ban via hardware info.
+
+Using the same command with the gc# will remove the ban.
+
+- A text file named masks.txt can also be used for IP banning.
+For each line in masks.txt a normal IP address can be typed, replacing
+each number for a * to enforce wildcard banning.
+
+Because I'm lazy, you'll have to include a * for each byte.  So,
+masks like "125.*" are acceptable.  You'll have to input "125.*.*.*"
+(Without the quotations, of course...)
+
+Sorry for the inconvienence! :P
+
+- Because of the new ban commands, localgms.ini has been updated to
+reflect the new values for allowing local GMs to ban people.
+
+- New command "/updatemasks" will reload the masks.txt file in the
+ship server.
+
+
+version 0.057 9/12/2008
+-----------------------
+- Ship now properly syncs the client's material count.
+(This fixes the wrong or missing data reported when leveling up...)
+- Material count checks implemented.
+- Some very minor changes to order of packets sent when joining
+lobby and game.
+
+
+version 0.056 9/12/2008
+-----------------------
+- Now reading armor and shield information from the pmt file.
+- Attempting to equip a weapon, armor or shield in which your class,
+sex, or race is not allowed will now disconnect you.
+- Attempting to equip a armor or shield in which your level does not
+meet the requirement will now disconnect you.
+- An updated bb_items.txt accompanies this release with corrected
+"Type" weapon entries.
+
+
+version 0.055 9/11/2008
+-----------------------
+- Accurate grind values thanks to Lee's help with reading the
+itempmt file.
+- All weapons which have an experience stealing special should steal
+now as there isn't any individual checks now for specific items.  The
+itempmt data is used to build a table with weapon specials and used
+accordingly. (S-ranks not included since I haven't finished challenge
+mode therefore no one should be tooting S-ranks around anyway...)
+
+
+version 0.054 9/11/2008
+-----------------------
+- Technique quick-select menu now saves.
+- Bug fixed where monsters wouldn't drop an item if the leader didn't
+at least get a hit on the monster.
+- Section ID of "floor" now properly changes. (Maybe...)
+
+
+version 0.053 9/10/2008
+-----------------------
+- Very minor network code change.
+- Also increased amount of supported players to 900.
+
+
+version 0.052 9/10/2008
+-----------------------
+- Fixed generation of common armor min/max stats.
+
+
+version 0.051 9/10/2008
+-----------------------
+- Fixed experience stealing for Master Raven, Last Swan, and Dual Bird
+weapons.
+- Added Android exp bonus when using King's specials in Ultimate mode.
+- Hopefully fixed shops from occasionally freezing players...
+- Changed method of allowing guildcards to be sent, hopefully this
+solves some glitches people are getting with guildcards not saving...
+- Black Paper's Deal now gives the appropriate items per difficulty,
+though there's a slightly higher chance for meseta than an actual item
+drop.
+
+
+version 0.050 9/9/2008
+----------------------
+- Fixed untekked weapon selling problem.  (Ship would award the wrong
+amount of meseta to the user, instead of 1 meseta, like it should have...)
+- Fixed amount of meseta obtained from selling a weapon with negative
+percents...
+- Removed Dreamcast ports of Maximum Attack from the ship archive.
+- Removed "A New Hope" from the ship archive. (This was accidentally
+added in there, to be honest.)
+- Replaced Japanese Beach Laughter quest with English version.
+- Fixed small event change delay when loading into the lobby.
+(New since 0.045)
+
+
+version 0.049 9/8/2008
+----------------------
+- Fixed a memory corruption issue during quest decompression.
+- Updated quest folder, moving Central Dome Fire Swirl to EP1 solo "side"
+- Added Tinkerbell's Dog 2 and Gallon's Plan to EP1 solo "side"
+
+
+version 0.048 9/7/2008
+----------------------
+- Common weapon drop algorithm adjusted.
+- Support for Gallon's Plan quest.
+- Fixed client crash when Rappies appeared in games where the ship
+event wasn't set to off, Christmas, Valentine's Day, Easter, Halloween,
+or Sonic.
+
+
+version 0.047 9/5/2008
+----------------------
+- Fixed Soul of a Blacksmith and Waterfall Tears flag checking.
+Now those two quests should show up on the quest list when the
+requirements to unlock them are met.
+- Fixed other one-person quests not related to the main story from
+not being able to appear when added to ep1solo.ini
+- Slight change to gold name color...
+
+
+version 0.046 9/4/2008
+----------------------
+- No more "Clear!", now properly dims quests in Episode I one-person
+after completion. :)
+
+
+version 0.045 9/4/2008
+----------------------
+- Fixed player flags setting for difficulties outside of normal.
+- Quest unlocks for episode 1 one-person and multi-mode implemented.
+(Areas are all still open by default, but to be able to play the
+one person quests in areas besides Forest, you must clear the
+appropriate government quests...)
+- Episode 1 one-person quests already played in a difficulty cannot
+be played again until all quests have been cleared for that difficulty.
+(Sorry for the ghetto way of implementing that ;D  Can't seem to get
+the text to dim... so "Clear!" it is...)
+- Point of Disaster has been changed to a bonus quest, a reward for
+clearing all of Episode IV government quests.
+
+
+version 0.044 9/3/2008
+-----------------------
+- Fixed "ghost" lobby games... maybe?
+- Player flags for government quests will now save even if the game
+isn't quit gracefully.
+- Updated map data to latest JP map data and removed wandering tekker
+in multi-mode games.  (Any clients connecting to a server running
+this ship need to be sure they're running either the latest Tethealla
+client or using the latest map data pack.  Check
+http://www.pioneer2.net/forum/ for details...)
+
+
+version 0.043 8/29/2008
+-----------------------
+- Fixed maximum number of rare monsters in a game from 12 to 16.
+- Made getting higher percent weapons from drops a little harder to do.
+- Fixed some > level 200 mags not being initialized.
+
+
+version 0.042 8/28/2008
+-----------------------
+- Improved detection of when an account is being used more than once to
+login.
+- Fixed more boxes than usual being empty...
+- Fixed common weapon drops needing to be tekked when they had no 
+special to begin with.
+- Fixed bugs with highest common non-cane or non-rod never getting 
+specials when dropped.
+- The amount of meseta given for a common drop's algorithm has changed 
+a bit...
+- Updated default INI file to fix experience problem.
+
+
+version 0.041 8/28/2008
+-----------------------
+- Bug fixed where set box drop set to meseta dropped a scape doll...
+- Fixed player count bug.
+
+
+version 0.040 8/27/2008
+-----------------------
+- Forgot to send experience rate modification for people joining the
+game.
+- Random rare monsters supported inside and outside of quests.  Rare 
+rate sets by the login server.
+
+
+version 0.039 8/26/2008
+-----------------------
+- Fixed a bug with loading the wrong maps for Seabed 1 & 2 for one 
+person mode.
+
+
+version 0.038 8/26/2008
+-----------------------
+- Fixed NPC death and other commands from disconnecting you in single
+player quests.
+- W/S supported.  Client selections seem glitchy... (Not a server
+problem... it comes from using the E W/S data with the J client...
+will look into it sometime...)
+- Corrected min/max armors and shield values (Lee submitted another
+correction list...)
+- EP4 rare drop rates corrected.  (I made them up, but they should work
+better for the PSO algorithm...)
+- Fixed EP4 drop rate text files to have the correct order for bosses.
+(Login Server)
+- ??? item dropping from Del Rappy for most IDs in Hard mode EP4 has
+been corrected.
+- ??? item dropping from Satellite Lizard in Very Hard mode EP4 for 
+Greennill, Skyly, and Bluefull corrected.
+- ??? item dropping from Merissa AA for Pinkal Very Hard EP4 has
+been corrected.
+- "Saber" dropping from Goran Detonator for Viridia, Pinkal and Whitill
+Ultimate EP4 has been corrected.
+- ??? item dropping from Girtablulu Skyly Ultimate EP4 has been 
+corrected.
+- "Saber" dropping from Zu Bluefull, Purplenum and Whitill Ultimate 
+EP4 has been corrected.
+- Client server/sync check for monsters only done outside of quests now.
+- Fixed bug with ParseMapData procedure for quests not loading the very
+last monster. (Oops :))
+- ship_server.exe now requires a ship_key.bin file to start and connect
+to the login server.
+- EXPERIENCE_RATE has now been changed from a percentage to just a number.
+(This makes it more compatible with PSO's 0x60 0xDD sub-command.)
+You can only boost the experience in 100% increments.  Use 1 for 100%,
+2 for 200%, 3 for 300%.  You'll notice now, that the experience boosted
+is now shown client side too!  (The purple numbers which pop up over an
+enemy after it's slain will match what your rate is...)
+- login_server now takes all the data from the full character during
+log on for the "preview" packet.  login_server now also forcably sets 
+skin & head to 0 on droids during preview of character.  (For those 
+who may crash themselves with /npc ... It won't repair your character 
+for you, though.)
+- Level of player now enforced for different difficulties for non-GMs.
+
+
+version 0.037 8/21/2008
+-----------------------
+- Fixed ParseMapData procedure crashing from bad data.  (Reading and
+writing bad memory...)
+- Fixed min/max armors and shields... for real this time.
+- Fixed a bug with local GM rights...
+
+
+version 0.036 8/21/2008
+-----------------------
+- Adjusted algorithm for fixed item drops in quests.
+- Fixed enemy detection for certain types in maps...
+(Wolves, Lillies, Sinow Beat/Gold, Sinow Berrill/Spigell,
+Kondrieu)
+- shop.dat modification detection added to login_server.
+- GM /stfu has been "upgraded". :)
+
+
+version 0.035 8/21/2008
+-----------------------
+- Adjusted unit drops per difficulty a bit.
+- Adjusted minimum random weapon, armor and shield drops a bit.
+- Server should now recognize fixed item drops in a quest.
+
+
+version 0.034 8/21/2008
+-----------------------
+- Forgot to check the bank for hacks too.  (LOL)
+- Added /arrow command.
+
+
+version 0.033 8/21/2008
+-----------------------
+- Weapon percents over 100% or under -100% will be reset to 0.
+- Weapon percent stacking is no longer possible.
+- Mags with a level over 200 will be initialized.
+- Updated Armor/Shield max variation table.  Corrected a lot of
+entries thanks to Lee.
+- EVP variable wasn't being placed correctly on items, now fixed.
+
+
+version 0.032 8/21/2008
+-----------------------
+- /stfu now sends a confirmation to the GM.
+- Symbol chats now don't get double sent to their originator.
+- Global GMs are now the only GMs which can make items.
+- /redbox is now also global GM only.
+(localgms.ini has been updated to reflect this...)
+- Default localgms.ini moved to the ini folder for editing before
+moving to the ship folder
+- Quest item allowance and rare drop charts now sent by the login server.
+- All GMs can trade with users again.
+- Local GMs can now enter passworded games.
+- Drop folder removed from archive.
+- questitem.txt removed from archive.
+
+
+version 0.031 8/21/2008
+-----------------------
+- /shipevent changed to /event
+- /makeitem changed to /item
+- Local GM support, read localgms.ini for more details
+- New /stfu GM command
+- New /ignore normal user command
+- New /warpall GM command added
+- Global GM name color changed.
+- Local GM name color added.
+- Global GMs can make items that users can pick up.
+Alpha server ship hosters, add yourself to your own localgms.ini file to
+give yourself GM privileges.
+
+
+version 0.030 8/20/2008
+-----------------------
+- Holy shit, this is what I get for just putting code in without testing
+it... the 0xAC waiting should now actually work. >_>
+
+
+version 0.029 8/20/2008
+-----------------------
+- Fixed joining games in progress.  (Woops!)
+
+
+version 0.028 8/20/2008
+-----------------------
+- Now using map data to determine enemy experience and such.
+(It is EXTREMELY important that the client data for the maps matches
+that of the ship server.  If not, monster experience and such may not
+be calculated correctly!)
+- More variations of maps in all modes, especially One Person.
+- Quest now only starts when ALL members TRULY have the quest loaded.
+- When attempting to join a Principal Quest game, you can no longer join
+if someone is still loading the quest.
+- Episode 2 experience calculation was slightly off, now it's accurate.
+- Now allows for customization of the battle parameter file.  It should
+be noted that whatever you adjust here has no effect on the end user
+with the exception of experience.  Statistics of monsters, like how hard 
+they hit and such, are set by the login server.
+- Now allows for customization of given experience.  Add an extra line
+to your current ship.ini file with the experience percentage rate.  Do
+not include a % sign.  For example, just type 100 for 100% experience
+or 300 for 300% experience.  Look at the ship.ini in the ini folder that 
+comes with the ship if you're still confused.
+- Now properly parses quests and the files that load them... >_>
+- Experience stealing specials now add the experience on the fly instead
+of after the monster is killed.
+- Team leaders should now be able to invite members, but not remove them.
+Masters can do both.
+- Fixed /dcall not to block connections permanently, like it occasionally
+did.  Also limited it's use to, well, me for now.
+- GM name color changed... (Local GM update didn't make it into this 
+release but probably will make the next one...  spent too much time
+testing map and quest loading... but realized an update is due... My
+apologes to Jon Wayne, but soon... promise!)
+- Now including standard battle parameter files with the ship.
+- Now including map data with the ship.
+
+
+version 0.024 8/18/2008
+-----------------------
+- Fixed bug which disallowed symbol chats.
+- Now if you're trying to have more than 30 items in your inventory,
+usually caused by a desync from trying to exchange items for team points,
+you will be disconnected.
+- Now if you try to donate items for team points, the item is properly
+deleted from your inventory with a nice little message.
+- Towards the Future should no longer disconnect you when attempting to
+nab the Purple Ring or Black Ring quest reward.  (Item value was missing
+from questitem.txt)
+- bb_items.txt now included with ship.
+
+
+version 0.023 8/18/2008
+-----------------------
+- Some changes to the way the item procedures clean up your data.
+Testing to see if this fixes the ???? item problems.
+
+
+version 0.022 8/17/2008
+-----------------------
+- Speed throttling added for certain commands.
+- Rappies will now always drop something when attacked as they rise from
+feigning death.
+- Fixed Forest problem in one person mode for Episode I.
+- Fixed (?) shop disconnection problem from using or equipping recently
+purchased items.
+- The item GSL files are no longer used.  Rare tables are generated
+from files located in the new drop sub-folder.  These are easily user
+editable with notepad.exe and the like.
+
+The Episode 4 rare occurance rates are pretty off, as far as the
+PSO algorithm is concerned, and need some correcting.  Anyone who's up to
+the task, feel free, otherwise I'll get around to correcting them when
+I can...
+
+
+version 0.021 8/17/2008
+-----------------------
+- Possibility of ???? item from Easter Egg and Jacko removed.
+- Fixed Saint/Sham/Kondy exp from EP4.
+- Any packets not handled by the ship will be logged to ship.log 
+(This might help desync issues if I can find out if the ship is blocking
+particular packets which need to be sent...)
+- Reverted back to older network code to see if it helps desyncs.
+
+
+version 0.020 8/16/2008
+-----------------------
+- When disconnected for any reason whatsoever, you're now given a reason
+why... (Unless the ship crashes...)
+- Fixed PB adding procedure for mags.  (If your mag is already messed up,
+you'll have to do it over, sorry.)
+- Fixed BPD and BPD2 not giving out rewards.
+
+
+version 0.019 8/16/2008
+-----------------------
+- Fixed GM logging of shipevent, reported last ship event and not new.
+- Fixed AOL Sunset Base disconnection issue with Waterfall.
+- Experience no longer goes up for level 200 characters.
+- DeleteFromInventory now shows everybody the 0x29 packet.
+- Wrapping items in Gallon's Shop now works.
+- Converting enemy parts should work...
+- Fixed Jungle 1 & Jungle 2 maps.  (This was changed in a recent version)
+
+
+version 0.018 8/16/2008
+-----------------------
+- Fixed extremely high % common items.
+- Fixed lobby crashes caused by people mangling their character data with
+a recompiled ship. (adjusted on login_server)
+- Fixed color chat bubble allowance. (adjusted on login_server)
+- Fixed SJS and Lame d'Argent percents.
+- Fixed game flags at counter and stopped the ability for other
+players to join one person games.
+- /dcall now disconnects users more slowly (so as to properly get their
+data to the login server without the login server disconnecting the ship
+for too much data...  Time to close connections = "number of users 
+connected" seconds...)
+
+
+version 0.017 8/15/2008
+-----------------------
+- Fixed de-equipping/re-equipping armors/units disconnection problem.
+(If you are bugged by this, just equip any random armor then unequip it
+to fix your slot allocation...)
+- Slight modification to level up procedure. (Glitch fix, part 2?)
+- GM /levelup command now puts MAG values into 0x30 packet.
+- Bank items now sort.
+- Modification to the random common weapon generation procedure.
+* First tier rare weapons can now be found randomly in Ultimate mode.
+* First tier rare canes and rods can be found as early as Very Hard mode.
+- A couple of new commands for GMs.  (/announce, /dc, /dcall)
+Since there's no ship GUI (yet), announce works a bit differently and you'll
+execute the command then send a mail.  Instead of the mail being sent,
+the announcement will be broadcast to all users on the ship.
+- Some GM actions logged to gm.log
+- GM created or dropped items cannot be picked up by normal players.
+- Character data saves every 10 minutes as well as when disconnected.
+(So if a ship crashes, the most you'll lose is 10 minutes of work...)
+- Names which are too long will now be truncated automatically.
+(No more "---" names...)
+
+
+version 0.016 8/14/2008
+-----------------------
+- Fixed unwrapping present problem.
+- Fixed Dark Falz' exp
+- Fixed boss teleporter not teleporting any but the game leader.
+- Government quests are now joinable mid quest by other players.
+- Modification to the level up procedure (hoping it fixes the glitch
+some other players encountered...)
+
+
+version 0.015 8/13/2008
+-----------------------
+- Some network code changes.
+- /makeitem GM command modified slightly, you can now omit any
+particular parameter and it'll be replaced with 00000000.
+- Fixed game leader transfer problem.
+
+
+version 0.014 8/13/2008
+-----------------------
+- Fixed padding of sent guild cards
+- Fixed item pickup problem when someone joins a game then leaves
+
+
+version 0.013 8/13/2008
+-----------------------
+- Fixed Tekking ruining and deleting items. (This is caused
+by a recent change I made...)
+- Increased DDOS packet threshold.
+
+
+version 0.012 8/12/2008
+-----------------------
+- Crash fix (?)
+- Mag evolution bug fixes.
+
+
+version 0.011 8/11/2008
+-----------------------
+- I thought 0.010 would be the last required update for awhile, but
+I made a mistake in the sell shop routine and any armor that had
+a slot would be sold for it's 4 slot price. >_>  McFixed!
+
+
+version 0.010 8/11/2008
+-----------------------
+- Added random min/max stat for non-rare armors and shields.
+- Selling to shop implemented.
+- Bank fix when depositing and withdrawing right away.
+
+
+version 0.009 8/11/2008
+-----------------------
+- Fixed exp while dead after tagging mob
+- Fixed not being able to leave team unless master removes you
+- Fixed TAB list of player's levels
+- Added random min/max stat for rare armors and shield
+- Added a /npc command so people could change NPCs without CE.
+
+
+version 0.008 8/11/2008
+-----------------------
+- Gogo ball should be fixed now.
+- Again requiring the new ship version to be ran to connect to logon server.
+- Anyone connecting to SPSOS hosted ships will also need to use the new
+TethPsoBB.exe file.
+
+
+version 0.007 8/11/2008
+-----------------------
+- 100% CPU usage fix when connection with the logon server is lost.
+- GMs can join locked games
+- TAB works on game list.
+- More descriptive error message when ship fails to authenticate.
+- The default ship.ini is located in a folder named "ini" in the ZIP archive.
+This is done so that you don't have to keep replacing it with yours on every
+new version.
+
+People who are hosting new ships must edit ship.ini and place it in the same
+folder as ship_server.exe

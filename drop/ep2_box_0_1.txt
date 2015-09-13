@@ -1,0 +1,65 @@
+# Tethealla Server Box Drop File
+# Episode: II, Section ID: Greennill, Difficulty: Normal
+#
+# File layout: 
+#
+# Three lines per box.
+# First line is area the box is found in.
+# Second line is rare occurance rate.  Valid values from 0 to 255.
+# Third line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+6
+202
+020000
+#
+7
+193
+020000
+#
+5
+170
+000702
+#
+7
+172
+000702
+#
+10
+174
+000703
+#
+5
+170
+000302
+#
+7
+172
+000302
+#
+10
+174
+000303
+#
+2
+175
+030F00
+#
+2
+175
+030E1D
+#
+4
+175
+030E1E
+#
+8
+175
+030E1F
+#
+8
+175
+030E24
+#
+8
+175
+01024D

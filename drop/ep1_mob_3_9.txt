@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Whitill, Difficulty: Ultimate
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+190
+002D00
+#
+# Hildeblue/Hildetorr
+249
+004500
+#
+# Mothmant/Mothvert
+190
+000507
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+209
+008F08
+#
+# Al Rappy/Pal Rappy
+249
+003E00
+#
+# Savage Wolf/Gulgus
+209
+008901
+#
+# Barbarous Wolf/Gulgus-gue
+185
+010346
+#
+# Booma/Bartle
+209
+000D01
+#
+# Gobooma/Barble
+209
+008B01
+#
+# Gigobooma/Tollaw
+150
+004300
+#
+# Grass Assassin/Crimson Assassin
+177
+010216
+#
+# Poison Lily/Ob Lily
+190
+004400
+#
+# Nar Lily/Mil Lily
+221
+001001
+#
+# Nano Dragon
+190
+004000
+#
+# Evil Shark/Vulmer
+185
+01033B
+#
+# Pal Shark/Govulmer
+209
+000E01
+#
+# Guil Shark/Melqueek
+190
+003400
+#
+# Pofuilly Slime
+177
+010129
+#
+# Pouilly Slime
+249
+002200
+#
+# Pan Arms
+190
+030D02
+#
+# Migium
+209
+000F01
+#
+# Hidoom
+190
+008B02
+#
+# Dubchic/Dubchich
+190
+001400
+#
+# Garanz/Baranz
+190
+030D0A
+#
+# Sinow Beat/Sinow Blue
+123
+001E00
+#
+# Sinow Gold/Sinow Red
+190
+030D06
+#
+# Canadine/Canabin
+150
+009309
+#
+# Canane/Canune
+190
+008902
+#
+# Delsaber
+190
+009400
+#
+# Chaos Sorcerer/Gran Sorcerer
+150
+004200
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+190
+004100
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+185
+010232
+#
+# Dark Belra/Indi Belra
+190
+030D0B
+#
+# Claw
+185
+010332
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+177
+01012A
+#
+# Dimenian/Arlan
+190
+002E00
+#
+# La Dimenian/Merlan
+190
+004C00
+#
+# So Dimenian/Del-D
+185
+010231
+#
+# Dragon/Sil Dragon
+215
+030D07
+#
+# De Rol Le/Dal Ral Lie
+238
+000507
+#
+# Vol Opt/Vol Opt ver. 2
+215
+00A300
+#
+# Dark Falz
+215
+010227
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+209
+000807
+#

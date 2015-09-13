@@ -1,0 +1,47 @@
+version 0.007 9/15/2008
+-----------------------
+- Now gives a warning if welcome.txt is missing or there are no
+patches to send.
+
+
+version 0.006 9/10/2008
+-----------------------
+- Very minor network code change.
+
+
+version 0.005 9/10/2008
+-----------------------
+- Fixed 100% CPU usage issue during speed throttling.
+
+
+version 0.004 9/10/2008
+-----------------------
+- Increased the number of compiled allowed connections.
+
+
+version 0.003 9/10/2008
+-----------------------
+- Fixed a potential jamming issue with the speed throttler.
+
+
+version 0.002 9/9/2008
+----------------------
+- Greatly reduced RAM requirements for the patch server.
+- Increased the amount of allowed patch files from 1024 to 4096.
+(If you go over this amount, the program will crash since I didn't
+code in a check for it yet... =P)
+- Global upload speed throttling.  (Edit patch.ini for details)
+- Removed MySQL information from being displayed at startup since
+the patch_server does NOT use MySQL (at the moment, though it might
+to set an isPatched flag for the login server...)
+
+
+version 0.001 9/8/2008
+----------------------
+- Initial release of the patch server.
+
+This program must reside in the same folder as login_server.exe
+and must have a patches folder named "patches" to operate.
+
+The default "patches" folder can be found in the latest login
+server binary release.

@@ -1,0 +1,213 @@
+# Tethealla Server Monster Drop File
+# Episode: I, Section ID: Yellowboze, Difficulty: Hard
+#
+# File layout: 
+#
+# Two lines per enemy.
+# First line is rare occurance rate.  Valid values from 0 to 255.
+# Second line is hex for actual drop.  Refer to bb_items.txt for valid hex values.
+#
+# Null
+0
+000000
+#
+# Hildebear/Hildelt
+216
+000205
+#
+# Hildeblue/Hildetorr
+255
+000106
+#
+# Mothmant/Mothvert
+0
+000000
+#
+# Monest/Mothvist
+0
+000000
+#
+# Rag Rappy/El Rappy
+201
+030D13
+#
+# Al Rappy/Pal Rappy
+255
+000A05
+#
+# Savage Wolf/Gulgus
+201
+000105
+#
+# Barbarous Wolf/Gulgus-gue
+201
+000605
+#
+# Booma/Bartle
+201
+030D0F
+#
+# Gobooma/Barble
+165
+030D10
+#
+# Gigobooma/Tollaw
+216
+000305
+#
+# Grass Assassin/Crimson Assassin
+209
+030D0E
+#
+# Poison Lily/Ob Lily
+201
+000605
+#
+# Nar Lily/Mil Lily
+255
+000606
+#
+# Nano Dragon
+216
+000405
+#
+# Evil Shark/Vulmer
+201
+000105
+#
+# Pal Shark/Govulmer
+201
+000605
+#
+# Guil Shark/Melqueek
+216
+000505
+#
+# Pofuilly Slime
+201
+000A04
+#
+# Pouilly Slime
+255
+000A05
+#
+# Pan Arms
+201
+030D02
+#
+# Migium
+216
+000105
+#
+# Hidoom
+216
+000605
+#
+# Dubchic/Dubchich
+201
+000605
+#
+# Garanz/Baranz
+209
+000D00
+#
+# Sinow Beat/Sinow Blue
+201
+000105
+#
+# Sinow Gold/Sinow Red
+216
+000805
+#
+# Canadine/Canabin
+201
+000A04
+#
+# Canane/Canune
+216
+000C04
+#
+# Delsaber
+209
+030D05
+#
+# Chaos Sorcerer/Gran Sorcerer
+216
+000905
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Dark Gunner
+201
+000A04
+#
+# Death Gunner
+0
+000000
+#
+# Chaos Bringer/Dark Bringer
+209
+006800
+#
+# Dark Belra/Indi Belra
+216
+000705
+#
+# Claw
+201
+000605
+#
+# Bulk
+0
+000000
+#
+# Bulclaw
+201
+01011E
+#
+# Dimenian/Arlan
+201
+000105
+#
+# La Dimenian/Merlan
+201
+000605
+#
+# So Dimenian/Del-D
+216
+000B04
+#
+# Dragon/Sil Dragon
+225
+008900
+#
+# De Rol Le/Dal Ral Lie
+225
+008C00
+#
+# Vol Opt/Vol Opt ver. 2
+225
+008B00
+#
+# Dark Falz
+0
+000000
+#
+# Null
+0
+000000
+#
+# Null
+0
+000000
+#
+# Gilchic/Gilchich
+201
+01021F
+#
