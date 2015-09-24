@@ -1,0 +1,45 @@
+ Re: Sodaboy's PSO Server (SPSOS "Tethealla" )
+
+    OK. As requested, heres the super easy guide to making a PSO server, brought to you by The Amazing Da_GPer! (No autographs please. :p)
+
+    Im going to assume that you already know how to install MySQL, mostly because I hate having to talk about how to install that stuff. So, lets get started, shall we?
+
+    We will need these programs:
+    ----------------------------------
+
+    - Tethealla PSO Server (Duh): pioneer2.net :: View Forum - SPSOS "Tethealla"
+    - Phantasy Star Online: Blue Burst (Tethealla Version): MEGAUPLOAD - The leading online storage and file delivery service
+    - A hex editor. We will use Hex Workshop V5 for this guide, but you can use any type that you like: MEGAUPLOAD - The leading online storage and file delivery service
+    - A SQL editor. We will use SQLyog 7.02 Enterprise for this guide, but you can again, use any type that you like: MEGAUPLOAD - The leading online storage and file delivery service
+    - The Internet: Sorry. No links for that. :p
+
+    Now, the fun part.....
+
+    1: Unzip spsos_login_v.047.zip to a folder of your choice. In this guide, I will call it SPSOS Login.
+    2: Unzip spsos_ship_v.143.zip to a different folder of your choice. Do not put it in the same folder that the login server is in. In this guide, I will call it SPSOS Ship.
+    3: Unzip Hex Workshop V5.zip to a different folder then both the login and ship folders. If your antivirus programs delete or say that the keygen thats included is a virus, its a false positive as I have used it myself to do this and know there safe. If you still dont feel safe using the keygen, just tell me and Ill make a key for you. Run hw32v502.msi to install Hex Workshop and then run the keygen to make your key to register the program.
+    Optional: Delete the folder with hw32v502.msi and the keygen.
+    4: Unzip SQLyog702Ent.zip to a different folder then both the login and ship folders. If your antivirus programs delete or say that the keygen thats included is a virus, its a false positive as I have used it myself to do this and know there safe. If you still dont feel safe using the keygen, just tell me and Ill make a key for you. Run SQLyog702Ent.exe to install SQLyog 7.02 Enterprise and then run the keygen to make your key to register the program.
+    Optional: Delete the folder with SQLyog702Ent.exe and the keygen.
+    5: Unzip PHANTASY STAR ONLINE Blue Burst (SPSOS Tethealla).zip to a different folder then both the login and ship folders. In this guide, I will call it PSO.
+    6: Run SQLyog and add the info for your user name and pass for your SQL. Have the host be localhost, the port be 3306, and the database be blank. Then click connect. If it asks to save, say yes so you dont need to do it again.
+    7: Now, a nice little screen with 3 windows will pop up. First, click on 3 Table Data to change the bottom right window. There will still be noting in it. Thats normal.
+    8: Now, right click on (User Name)@localhost and choose Create Database. In the window that pops up, type in the Database name, pso_server. Leve the other two as default. Click OK.
+    9: Right click on pso_server and choose Restore From SQL Dump. In the window that pops up, choose C:\SPSOS Login\sql\pso_server.sql. Then click Execute. When it says that its done, click on close. Close SQLyog.
+    10: In C:\SPSOS Login\ini, open tethealla.ini with Notepad. Change the user name and pass to what you have your user name and pass be on SQL (Should be the same as on SQLyog). The database should be pso_server. The line that says 127.0.0.1 should say your local IP (192.168.X.X). If you dont know it, in Windows Vista or 7, goto start, and type in cmd in the box in there to bring up a command prompt or in XP, goto start and then run and then follow the rest that Vista/7 said. Then type in ipconfig and copy the IP address there. Then close the command prompt by either clicking the X or typing in exit.
+    11: Type in whatever you want for the welcome message.
+    12: Change the override IP to say your external IP. If you dont know it, just go to What Is My IP Address - Shows Your IP Address to get it.
+    13: Save the file by the same name in SPSOS Login. Do not save it in the ini folder. Then close Notepad.
+    14: Open welcome.txt in Notepad. This is the words that youll see in the patch screen. Type whatever you want it to say. I suggest it saying what new stuff may be in your server or the server rules. Save it by the same name in SPSOS Login. Do not save it in the ini folder. Then close Notepad.
+    15: Goto C:\SPSOS Ship\ini and open ship.ini in Notepad. Change the word auto to be your external IP. See #12 if you dont remember how to find it.
+    16: Change the part that says 127.0.0.1 to your external IP.
+    17: Name your ship to whatever you want but make sure its not over I think 10 or 15 letters. Save it by the same name in SPSOS Ship. Do not save it in the ini folder. Then close Notepad.
+    18: Open localgms.ini in Notepad. This is your local GM list. Change the numbers 42000043,3 to say 42000001,3. That should make you be the first one on the local GM list. Save it by the same name in SPSOS Ship. Do not save it in the ini folder. Then close Notepad.
+    19: Goto SPSOS Login and run make_key.exe and then copy, not cut the ship_key.bin that appears to SPSOS Ship. Go back to SPSOS Login.
+    20: Run account_add.exe and follow what it says to make your account on the server. This will be your GM account to play on.
+    21: Goto PSO and right click on PsoBB.exe. Choose Hex Edit with Hex Workshop v5. Hex Workshop will open and youll see a bunch of letters and numbers. This is called hex code. Dont worry if it looks confusing as Ill show you what to do. In the menus, choose edit then find. A window will pop up. In that window, change the type to text string and below that in valuse, type in the word episode. Then click OK.
+    22: Now, look in the area to the right of the hex code. Youll see the word episode and a few IPs saying 127.0.0.1. Click on the beginning of the first 127.0.0.1 and replace, not add each IP with your external IP. See #12 if your dont remember how to find it. When you see a bunch of dots and a few letter Ps, save.
+    23: Repeat steps 21 and 22 but with vista.exe.
+    24: Using whatever features your router may have, open ports 11000, 11001, 12000 and 12001 as well as ports 5278, 5279, and 5280. I cant help you open those ports as each router is different, but if you need help, then go to the web site of the maker of the router or Google for info on how to open the ports on your router.
+    25: Last, but not least, (Yay!), goto SPSOS Login and run patch_server.exe and then login_server.exe. Then, goto SPSOS Ship and run ship_server.exe. Then, goto PSO and run either PsoBB.exe if your running XP or vista.exe if your running Vista or 7.
+    26: Create a character and have fun! :D If you need GM codes or any other stuff to make PSO more fun, check this forum post, especially the first post.
